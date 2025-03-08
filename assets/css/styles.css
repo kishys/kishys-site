@@ -101,6 +101,7 @@ body.dark-theme {
   --container-color: hsl(var(--hue), 24%, 12%);
 }
 
+
 /*========== 
     Color changes in some parts of 
     the website, in light theme
@@ -160,7 +161,7 @@ body.dark-theme {
 
 .profile__perfil {
   width: 100px;
-  height: 1000px;
+  height: 100px;
   background: linear-gradient(180deg,
               hsla(var(--hue), var(--sat), var(--lig), 1) 0%,
               hsla(var(--hue), var(--sat), var(--lig), .2) 100%);
