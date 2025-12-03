@@ -21,7 +21,7 @@ export default function FadeIn({
       opacity: 1,
       transform: "translateY(0)",
       transition: {
-        ease: [0.37, 0, 0.63, 1],
+        ease: [0.37, 0, 0.63, 1] as [number, number, number, number],
         staggerChildren: staggerChildren,
       },
     },
@@ -34,7 +34,7 @@ export default function FadeIn({
       transform: "translateY(0)",
       transition: {
         duration: 1.05,
-        ease: [0.37, 0, 0.63, 1],
+        ease: [0.37, 0, 0.63, 1] as [number, number, number, number],
       },
     },
   };
