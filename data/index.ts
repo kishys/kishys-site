@@ -16,6 +16,7 @@ export const experienceData: ProjectDataProps[] = [
     summary:
       "STEM based Non-Profit Presentation, Workshops, and Website Development",
     date: "2024 - Present",
+    href: "innovire",
     tags: ["React", "Node.js", "MongoDB", "Express.js", "Stripe", "TypeScript"],
   },
   {
@@ -24,6 +25,7 @@ export const experienceData: ProjectDataProps[] = [
       "Enterprise-grade task management application with real-time collaboration features, role-based access control, and comprehensive analytics dashboard. Implemented using microservices architecture.",
     summary:
       "Level NCO, Operations and Supply, Flight Senior + Section Commander",
+    href: "fsgt",
     tags: ["Next.js","PostgreSQL","Redis","WebSocket","TypeScript","TailwindCSS","Docker",],
     date: "2024",
   },
@@ -32,6 +34,7 @@ export const experienceData: ProjectDataProps[] = [
     description:
       "Automated deployment pipeline and infrastructure management tools for cloud services. Streamlined DevOps workflows with infrastructure as code and continuous integration/deployment.",
     summary: "TBM",
+    href: "lifeguard",
     tags: ["AWS","Terraform","Jenkins","Docker","Kubernetes","Python",],
     date: "2023",
   },
@@ -40,6 +43,7 @@ export const experienceData: ProjectDataProps[] = [
     description:
       "Interactive data visualization platform with real-time metrics and customizable dashboards. Processes large datasets efficiently with optimized queries and caching strategies.",
     summary: "Working on Mechatronics Subsystem on Playing Robot",
+    href: "team1325",
     tags: ["React", "D3.js", "Node.js", "PostgreSQL", "Redis", "TypeScript"],
     date: "2023",
   },
@@ -49,6 +53,7 @@ export const experienceData: ProjectDataProps[] = [
       "Cross-platform mobile application with offline-first architecture and seamless cloud synchronization. Features include push notifications, geolocation services, and secure authentication.",
     summary:
       "Leading key departments to drive organizational success",
+    href: "drint",
     tags: ["React Native","Expo","Firebase","TypeScript","Redux"],
     date: "2022",
   },
@@ -57,7 +62,7 @@ export const experienceData: ProjectDataProps[] = [
 // Projects data - displayed in the second carousel
 export const projectData: ProjectDataProps[] = [
   {
-    title: "API Gateway Service",
+    title: "AI Education Chat Bot",
     description:
       "Scalable API gateway with rate limiting, authentication, and request routing. Handles high-traffic loads with efficient caching and load balancing strategies.",
     summary:
@@ -66,7 +71,7 @@ export const projectData: ProjectDataProps[] = [
     date: "2024",
   },
   {
-    title: "Machine Learning Pipeline",
+    title: "Time Management Website",
     description:
       "End-to-end ML pipeline for data processing, model training, and deployment. Automated workflows for continuous model improvement and monitoring.",
     summary: "Automated ML pipeline with monitoring",

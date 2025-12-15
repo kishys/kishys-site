@@ -16,14 +16,14 @@ const experiences = [
     role: "Full Stack Developer",
     company: "Royal Canadian Air Force",
     date: "2021 - Present",
-    href: "rcaf",
+    href: "drint",
     description: "Developing military software solutions and leading technical initiatives.",
   },
   {
     role: "Software Developer",
     company: "Various Projects",
     date: "2020 - Present",
-    href: "freelance",
+    href: "drint",
     description:
       "Building modern web applications with React, TypeScript, and cloud technologies.",
   },
@@ -31,7 +31,7 @@ const experiences = [
     role: "Technical Lead",
     company: "Development Teams",
     date: "2022 - Present",
-    href: "leadership",
+    href: "drint",
     description:
       "Leading cross-functional teams and mentoring junior developers.",
   },
@@ -63,9 +63,9 @@ export default function page() {
             <NavigationMenu buttons={navigationMenuButtons} />
           </div>
           <FadeIn className="space-y-20">
-            {experiences.map((experience) => (
+            {experiences.map((experience, index) => (
               <ExperienceCard
-                key={experience.href}
+                key={`${experience.company}-${index}`}
                 role={experience.role}
                 company={experience.company}
                 date={experience.date}

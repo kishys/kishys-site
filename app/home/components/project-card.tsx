@@ -5,13 +5,14 @@ export default function ProjectCard({
   title,
   summary,
   date,
+  href,
 }: ProjectDataProps) {
-  const slug = title.toLowerCase().replaceAll(" ", "-");
+  const slug = href || title.toLowerCase().replaceAll(" ", "-");
   return (
     <>
       <div className="relative h-full w-full rounded-lg">
         <Image
-          src={`/images/projects/${slug}.png`}
+          src={`/images/experience/${slug}.png`}
           alt={title}
           quality={80}
           fill

@@ -63,24 +63,24 @@ export default function Navbar() {
         Toronto, CA
       </span>
       
-      <div className="flex items-center gap-10 text-2xl">
+      <div className="flex items-center gap-24 text-2xl">
         {socialLinks.map((link) => (
           <Link
             key={link.id}
             href={link.href}
             target={link.id !== "email" ? "_blank" : undefined}
-            className="group relative flex items-center gap-2 transition-colors hover:text-accent"
+            className="group relative flex items-center transition-colors hover:text-accent"
             onMouseEnter={() => setHoveredIcon(link.id)}
             onMouseLeave={() => setHoveredIcon(null)}
           >
-            <span className="transition-transform duration-200">
+            <span className="relative z-10">
               {link.icon}
             </span>
             <span 
-              className={`overflow-hidden text-base font-medium transition-all duration-300 ease-out ${
+              className={`absolute left-8 whitespace-nowrap text-base font-medium transition-opacity duration-700 ease-out ${
                 hoveredIcon === link.id 
-                  ? "max-w-[120px] opacity-100" 
-                  : "max-w-0 opacity-0"
+                  ? "opacity-100" 
+                  : "opacity-0 pointer-events-none"
               }`}
             >
               {link.label}

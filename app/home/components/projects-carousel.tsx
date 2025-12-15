@@ -28,13 +28,13 @@ export default function ProjectsCarousel() {
     >
       <CarouselContent>
         {experienceData.map((project, index) => {
-          const slug = project.title.toLowerCase().replaceAll(" ", "-");
+          const slug = project.href || project.title.toLowerCase().replaceAll(" ", "-");
           return (
             <CarouselItem
               key={index}
               className="group aspect-video basis-full md:basis-1/2 xl:basis-1/2"
             >
-              <Link href={`/projects/${slug}`}>
+              <Link href={`/experience/${slug}`}>
                 <BentoCard className="!p-0">
                   <ProjectCard {...project} />
                 </BentoCard>
