@@ -61,7 +61,7 @@ export default async function Page(props: {
         <div className="absolute -left-20 h-full w-1/4 bg-[radial-gradient(ellipse_at_left,hsl(var(--accent)),transparent,transparent)] blur-3xl" />
         <div className="absolute -right-20 bottom-0 h-3/4 w-5/6 bg-[radial-gradient(ellipse_at_bottom_right,hsl(var(--accent)),transparent,transparent)] blur-3xl" />
       </div>
-      <Template className="flex min-h-dvh max-w-screen-2xl flex-col items-center">
+      <Template className="flex min-h-dvh max-w-screen-2xl flex-col items-center px-8 md:px-20">
         <FadeIn className="max-w-prose">
           <div className="mb-6">
             <h1 className="mb-2 text-6xl font-semibold">{title}.</h1>

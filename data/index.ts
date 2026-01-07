@@ -131,4 +131,20 @@ export const projectData: ProjectDataProps[] = [
     ],
     date: "2022",
   },
+  {
+    title: "Integration",
+    description:
+      "Decentralized application with smart contract integration and cryptocurrency payment processing. Secure transactions with wallet connectivity.",
+    summary:
+      "DApp with smart contracts and crypto payments",
+    tags: [
+      "Solidity",
+      "Web3.js",
+      "Ethereum",
+      "React",
+      "TypeScript",
+      "MetaMask",
+    ],
+    date: "2022",
+  },
 ];
