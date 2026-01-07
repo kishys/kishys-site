@@ -1,5 +1,7 @@
 import "@/app/globals.css";
 import NoiseSVG from "@/components/noise-svg";
+import { ThemeProvider } from "@/components/theme-provider";
+import { GlobalShortcutsProvider } from "@/components/global-shortcuts";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
@@ -26,8 +28,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <link rel="icon" href="/images/favicon.ico" sizes="any" />
       <body className={`min-h-dvh ${inter.className} ${array.variable}`}>
-        <NoiseSVG />
-        {children}
+        <ThemeProvider defaultTheme="dark">
+          <GlobalShortcutsProvider>
+            <NoiseSVG />
+            {children}
+          </GlobalShortcutsProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

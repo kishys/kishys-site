@@ -32,7 +32,7 @@ export default function ProjectsCarousel() {
           return (
             <CarouselItem
               key={index}
-              className="group aspect-video basis-full md:basis-1/2 xl:basis-1/2"
+              className="group aspect-video basis-full sm:basis-1/2 lg:basis-1/2"
             >
               <Link href={`/experience/${slug}`}>
                 <BentoCard className="!p-0">
@@ -43,8 +43,8 @@ export default function ProjectsCarousel() {
           );
         })}
       </CarouselContent>
-      <CarouselPrevious className="left-2 opacity-0 transition-opacity group-hover/carousel:opacity-100" />
-      <CarouselNext className="right-2 opacity-0 transition-opacity group-hover/carousel:opacity-100" />
+      <CarouselPrevious className="left-2 hidden md:flex opacity-0 transition-opacity group-hover/carousel:opacity-100" />
+      <CarouselNext className="right-2 hidden md:flex opacity-0 transition-opacity group-hover/carousel:opacity-100" />
     </Carousel>
   );
 }

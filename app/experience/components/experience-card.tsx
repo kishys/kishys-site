@@ -39,9 +39,9 @@ export default function ExperienceCard({
       </div>
       <div className="space-y-1">
         <h3 className="text-lg font-medium">
-          {company} <span className="text-accent-foreground"> — {date}</span>
+          {company} <span className="text-muted-foreground"> — {date}</span>
         </h3>
-        <p className="self-center text-accent-foreground">{description}</p>
+        <p className="self-center text-muted-foreground">{description}</p>
       </div>
     </FadeIn>
   );

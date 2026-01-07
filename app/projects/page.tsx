@@ -1,9 +1,9 @@
 import FadeIn from "@/components/fade-in";
-import NavigationMenu from "@/components/navigation-menu";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 import Template from "@/components/template";
 import { projectData } from "@/data";
 import Link from "next/link";
-import { HiBriefcase, HiMiniHome } from "react-icons/hi2";
 import Background from "./components/background";
 import ProjectCard from "./components/project-card";
 
@@ -13,17 +13,13 @@ export const metadata = {
 };
 
 export default function page() {
-  const navigationMenuButtons = [
-    { Icon: HiMiniHome, label: "Home", href: "/" },
-    { Icon: HiBriefcase, label: "Experience", href: "/experience" },
-  ];
-
   return (
     <>
       <Background />
       <Template className="max-w-screen-xl">
+        <Navbar />
         <FadeIn>
-          <div className="mb-12">
+          <div className="mb-12 mt-8">
             <h1 className="mb-8 text-5xl font-semibold"> Projects.</h1>
             <p className="mb-1 font-medium">
               Here are some of the projects I have been building over the past
@@ -39,8 +35,6 @@ export default function page() {
                 GitHub.
               </Link>
             </p>
-
-            <NavigationMenu buttons={navigationMenuButtons} />
           </div>
 
           <FadeIn staggerChildren={0.2} className="grid gap-8 md:grid-cols-2">
@@ -49,6 +43,7 @@ export default function page() {
             })}
           </FadeIn>
         </FadeIn>
+        <Footer className="mt-12" />
       </Template>
     </>
   );

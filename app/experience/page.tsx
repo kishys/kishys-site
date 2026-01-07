@@ -1,8 +1,8 @@
 import FadeIn from "@/components/fade-in";
-import NavigationMenu from "@/components/navigation-menu";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 import Template from "@/components/template";
 import Link from "next/link";
-import { HiMiniFolder, HiMiniHome } from "react-icons/hi2";
 import Background from "./components/background";
 import ExperienceCard from "./components/experience-card";
 
@@ -38,16 +38,13 @@ const experiences = [
 ];
 
 export default function page() {
-  const navigationMenuButtons = [
-    { Icon: HiMiniHome, label: "Home", href: "/" },
-    { Icon: HiMiniFolder, label: "Projects", href: "/projects" },
-  ];
   return (
     <>
       <Background />
-      <Template className="max-w-screen-lg">
+      <Template>
+        <Navbar />
         <FadeIn>
-          <div className="mb-12">
+          <div className="mb-12 mt-8">
             <h1 className="mb-8 text-5xl font-semibold">Experience.</h1>
             <p className="mb-4 font-medium text-muted-foreground">
               You can learn more about me on{" "}
@@ -60,9 +57,8 @@ export default function page() {
                 </Link>
               </span>
             </p>
-            <NavigationMenu buttons={navigationMenuButtons} />
           </div>
-          <FadeIn className="space-y-20">
+          <FadeIn className="space-y-20 max-w-screen-lg mx-auto">
             {experiences.map((experience, index) => (
               <ExperienceCard
                 key={`${experience.company}-${index}`}
@@ -75,6 +71,7 @@ export default function page() {
             ))}
           </FadeIn>
         </FadeIn>
+        <Footer className="mt-12" />
       </Template>
     </>
   );

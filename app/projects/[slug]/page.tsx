@@ -1,4 +1,5 @@
 import FadeIn from "@/components/fade-in";
+import Navbar from "@/components/navbar";
 import NavigationMenu from "@/components/navigation-menu";
 import SocialButton from "@/components/social-button";
 import Template from "@/components/template";
@@ -61,6 +62,9 @@ export default async function Page(props: {
         <div className="absolute -right-20 bottom-0 h-3/4 w-5/6 bg-[radial-gradient(ellipse_at_bottom_right,hsl(var(--accent)),transparent,transparent)] blur-3xl" />
       </div>
       <Template className="flex min-h-dvh max-w-screen-2xl flex-col items-center">
+        <div className="w-full mb-8">
+          <Navbar />
+        </div>
         <FadeIn className="max-w-prose">
           <div className="mb-6 flex flex-wrap items-baseline gap-4">
             <h1 className="text-6xl font-semibold">{title}.</h1>

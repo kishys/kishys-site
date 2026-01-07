@@ -23,10 +23,10 @@ export default function page() {
             <Hero />
             <Technologies />
           </FadeIn>
-          <ExperiencesHeader />
-          <ProjectsCarousel />
           <ProjectsHeader />
           <ProjectsCarousel2 />
+          <ExperiencesHeader />
+          <ProjectsCarousel />
           <Footer />
         </FadeIn>
       </Template>
