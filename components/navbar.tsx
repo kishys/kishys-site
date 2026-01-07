@@ -124,7 +124,12 @@ export default function Navbar() {
         <MobileMenu />
       </div>
       
-      {/* Center section */}
+      {/* Center section - Time visible on mobile */}
+      <span className="md:hidden font-mono text-xs font-medium text-muted-foreground tabular-nums">
+        {mounted ? `${time} EST` : "00:00:00 EST"}
+      </span>
+      
+      {/* Center section - Desktop */}
       {isMainSubPage ? (
         // Home icon for experience/projects main pages
         <Link 
@@ -136,7 +141,7 @@ export default function Navbar() {
           <span className="text-xs opacity-0 transition-opacity duration-300 group-hover:opacity-100">↵</span>
         </Link>
       ) : isDetailPage ? (
-        // Clock for detail pages
+        // Clock for detail pages (desktop only, mobile shows in center)
         <span className="font-mono text-sm font-medium text-muted-foreground tabular-nums hidden md:block">
           {mounted ? `${time} EST` : "00:00:00 EST"}
         </span>

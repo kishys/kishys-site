@@ -46,7 +46,7 @@ export default function Footer({ ...props }: React.HTMLProps<HTMLDivElement>) {
             <p className="font-medium">Kishan Suhirthan</p>
             <FlipLink
               href="https://innovire.ca/"
-              className="text-accent-foreground hover:text-accent"
+              className="text-accent-foreground hover:text-accent hidden sm:block"
             >
               innovire.ca
             </FlipLink>

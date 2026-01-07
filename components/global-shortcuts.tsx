@@ -7,7 +7,7 @@ import { useTheme } from "@/components/theme-provider";
 export function GlobalShortcutsProvider({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const { toggleTheme } = useTheme();
-  const arrowUpPressed = React.useRef(false);
+  const slashPressed = React.useRef(false);
   const [commandPaletteOpen, setCommandPaletteOpen] = React.useState(false);
 
   React.useEffect(() => {
@@ -19,58 +19,58 @@ export function GlobalShortcutsProvider({ children }: { children: React.ReactNod
         return;
       }
 
-      // Track arrow up press for shortcuts
-      if (e.key === "ArrowUp" && !e.repeat && !e.ctrlKey && !e.metaKey) {
-        arrowUpPressed.current = true;
+      // Track / (slash) press for shortcuts
+      if (e.key === "/" && !e.repeat && !e.ctrlKey && !e.metaKey) {
+        slashPressed.current = true;
         setTimeout(() => {
-          arrowUpPressed.current = false;
+          slashPressed.current = false;
         }, 500);
         return;
       }
 
-      // Arrow Up + letter shortcuts (works globally)
-      if (arrowUpPressed.current && !e.ctrlKey && !e.metaKey) {
+      // / (slash) + letter shortcuts (works globally)
+      if (slashPressed.current && !e.ctrlKey && !e.metaKey) {
         const key = e.key.toUpperCase();
         
         switch (key) {
           case "H":
             e.preventDefault();
-            arrowUpPressed.current = false;
+            slashPressed.current = false;
             router.push("/");
             break;
           case "E":
             e.preventDefault();
-            arrowUpPressed.current = false;
+            slashPressed.current = false;
             router.push("/experience");
             break;
           case "P":
             e.preventDefault();
-            arrowUpPressed.current = false;
+            slashPressed.current = false;
             router.push("/projects");
             break;
           case "G":
             e.preventDefault();
-            arrowUpPressed.current = false;
+            slashPressed.current = false;
             window.open("https://github.com/kishys", "_blank");
             break;
           case "L":
             e.preventDefault();
-            arrowUpPressed.current = false;
+            slashPressed.current = false;
             window.open("https://www.linkedin.com/in/kishansuhirthan/", "_blank");
             break;
           case "M":
             e.preventDefault();
-            arrowUpPressed.current = false;
+            slashPressed.current = false;
             window.location.href = "mailto:kishansuhirthan@gmail.com";
             break;
           case "R":
             e.preventDefault();
-            arrowUpPressed.current = false;
+            slashPressed.current = false;
             window.open("/resume.pdf", "_blank");
             break;
           case "T":
             e.preventDefault();
-            arrowUpPressed.current = false;
+            slashPressed.current = false;
             toggleTheme();
             break;
         }

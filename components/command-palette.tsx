@@ -42,7 +42,7 @@ export default function CommandPalette({ open, onOpenChange }: CommandPalettePro
   const { theme, toggleTheme } = useTheme();
   const inputRef = React.useRef<HTMLInputElement>(null);
   const [selectedIndex, setSelectedIndex] = React.useState(0);
-  const arrowUpPressed = React.useRef(false);
+  const slashPressed = React.useRef(false);
 
   const commandGroups: CommandGroup[] = [
     {
@@ -152,28 +152,28 @@ export default function CommandPalette({ open, onOpenChange }: CommandPalettePro
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!open) return;
       
-      // Track arrow up press
-      if (e.key === "ArrowUp" && !e.repeat) {
-        arrowUpPressed.current = true;
+      // Track / (slash) press
+      if (e.key === "/" && !e.repeat) {
+        slashPressed.current = true;
         // Reset after a short delay if no letter key follows
         setTimeout(() => {
-          arrowUpPressed.current = false;
+          slashPressed.current = false;
         }, 500);
       }
 
-      if (e.key === "ArrowUp" && !e.ctrlKey && !e.metaKey) {
+      if (e.key === "/" && !e.ctrlKey && !e.metaKey) {
         // Check if a letter key was pressed right before
         return;
       }
       
-      // Arrow Up + letter shortcuts
-      if (arrowUpPressed.current && !e.ctrlKey && !e.metaKey) {
+      // / (slash) + letter shortcuts
+      if (slashPressed.current && !e.ctrlKey && !e.metaKey) {
         const key = e.key.toUpperCase();
         for (const group of commandGroups) {
           for (const item of group.items) {
             if (item.shortcut === key) {
               e.preventDefault();
-              arrowUpPressed.current = false;
+              slashPressed.current = false;
               item.action();
               return;
             }
@@ -299,7 +299,7 @@ export default function CommandPalette({ open, onOpenChange }: CommandPalettePro
                                 ? "bg-accent/20 text-accent" 
                                 : "bg-muted text-muted-foreground"
                             )}>
-                              ↑
+                              /
                             </kbd>
                             <span className="text-muted-foreground/50">+</span>
                             <kbd className={cn(
