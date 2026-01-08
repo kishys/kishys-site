@@ -6,36 +6,30 @@ export default function Hero() {
     <BentoCard className="group grid text-center md:text-left">
       <div className="place-self-center flex flex-col md:flex-row items-center gap-6 md:gap-8">
         {/* Animated Logo */}
-        <div className="relative">
+        <div className="relative w-28 h-28 md:w-32 md:h-32">
           {/* Rotating border */}
-          <div className="absolute inset-0 rounded-full">
+          <div className="absolute -inset-2 rounded-full">
             <svg className="w-full h-full animate-spin" style={{ animationDuration: '3s' }} viewBox="0 0 120 120">
               <circle
                 cx="60"
                 cy="60"
-                r="56"
+                r="54"
                 fill="none"
-                stroke="url(#blueGradient)"
-                strokeWidth="4"
-                strokeDasharray="50 300"
+                stroke="hsl(var(--accent))"
+                strokeWidth="6"
+                strokeDasharray="100 200"
                 strokeLinecap="round"
+                opacity="0.8"
               />
-              <defs>
-                <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#3b82f6" stopOpacity="1" />
-                  <stop offset="50%" stopColor="#60a5fa" stopOpacity="0.8" />
-                  <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.3" />
-                </linearGradient>
-              </defs>
             </svg>
           </div>
           {/* Logo */}
-          <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden bg-background border-2 border-blue-500/20">
+          <div className="relative w-full h-full rounded-full overflow-hidden bg-background border-2 border-accent/30">
             <Image
               src="/images/K-Logo.png"
               alt="Kishan Logo"
               fill
-              className="object-cover p-2"
+              className="object-cover object-center scale-125"
               priority
             />
           </div>
