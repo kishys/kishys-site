@@ -26,7 +26,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <link rel="icon" href="/images/favicon.ico" sizes="any" />
       <body className={`min-h-dvh ${inter.className} ${array.variable}`}>
         <ThemeProvider defaultTheme="dark">
           <GlobalShortcutsProvider>
