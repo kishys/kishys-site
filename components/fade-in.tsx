@@ -12,15 +12,16 @@ interface FadeInProps extends PropsWithChildren<MotionProps> {
 export default function FadeIn({
   children,
   className,
-  staggerChildren = 0.35,
+  staggerChildren = 0.08,
   ...props
 }: FadeInProps) {
   const container = {
-    hidden: { opacity: 0, transform: "translateY(32px)" },
+    hidden: { opacity: 0, transform: "translateY(16px)" },
     show: {
       opacity: 1,
       transform: "translateY(0)",
       transition: {
+        duration: 0.18,
         ease: [0.37, 0, 0.63, 1] as [number, number, number, number],
         staggerChildren: staggerChildren,
       },
@@ -28,12 +29,12 @@ export default function FadeIn({
   };
 
   const item = {
-    hidden: { opacity: 0, transform: "translateY(32px)" },
+    hidden: { opacity: 0, transform: "translateY(12px)" },
     show: {
       opacity: 1,
       transform: "translateY(0)",
       transition: {
-        duration: 1.05,
+        duration: 0.22,
         ease: [0.37, 0, 0.63, 1] as [number, number, number, number],
       },
     },

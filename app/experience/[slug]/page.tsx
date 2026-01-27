@@ -4,6 +4,7 @@ import Template from "@/components/template";
 import { experienceData } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
+import { FiExternalLink, FiCreditCard } from "react-icons/fi";
 import { useState, useEffect, use } from "react";
 import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
 import { HiDocumentText } from "react-icons/hi2";
@@ -59,6 +60,24 @@ export default function Page(props: {
   const { title, description, tags, date, href, summary } = experience;
   const imageSlug = href || title.toLowerCase().replaceAll(" ", "-");
 
+  function calcDuration(start?: string, end?: string) {
+    if (!start) return "";
+    try {
+      const s = new Date(start);
+      const e = end === "Present" || !end ? new Date() : new Date(end);
+      const years = e.getFullYear() - s.getFullYear();
+      const months = e.getMonth() - s.getMonth();
+      const totalMonths = years * 12 + months;
+      if (totalMonths < 0) return "";
+      if (totalMonths < 12) return `${totalMonths} mo${totalMonths !== 1 ? "s" : ""}`;
+      const y = Math.floor(totalMonths / 12);
+      const m = totalMonths % 12;
+      return m === 0 ? `${y} yr${y !== 1 ? "s" : ""}` : `${y} yr ${m} mo`;
+    } catch (e) {
+      return "";
+    }
+  }
+
   return (
     <>
       <div className="pointer-events-none absolute left-0 top-0 h-full w-full animate-background overflow-clip opacity-15 duration-1000 ease-smooth">
@@ -106,7 +125,7 @@ export default function Page(props: {
               {/* Header */}
               <div className="space-y-1">
                 <h1 className="text-2xl font-semibold">{title}</h1>
-                <p className="text-sm text-accent">{date}</p>
+                <p className="text-sm text-accent">{date} {"•"} {calcDuration((experience as any).startDate, (experience as any).endDate)}</p>
               </div>
 
               {/* Image */}
@@ -119,22 +138,50 @@ export default function Page(props: {
                 />
               </div>
 
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2">
-                {tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="px-2 py-1 text-xs rounded-full bg-accent/10 text-muted-foreground border border-accent/20"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              {/* Buttons (Website / vCard) centered */}
+              <div className="flex gap-3 justify-center">
+                <a
+                  href={(experience as any).website || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => { if (!(experience as any).website) e.preventDefault(); }}
+                  aria-label="Website"
+                  className="px-3 py-1.5 rounded-md border border-border/50 hover:border-accent hover:text-accent transition-colors flex items-center"
+                >
+                  <FiExternalLink className="w-5 h-5" />
+                </a>
+                <a
+                  href={(experience as any).vcard || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => { if (!(experience as any).vcard) e.preventDefault(); }}
+                  aria-label="vCard"
+                  className="px-3 py-1.5 rounded-md border border-border/50 hover:border-accent hover:text-accent transition-colors flex items-center"
+                >
+                  <FiCreditCard className="w-5 h-5" />
+                </a>
               </div>
 
               {/* Description */}
               <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
                 <p>{summary}</p>
                 <p>{description}</p>
+              </div>
+
+              {/* Progression / Positions */}
+              <div className="mt-4">
+                <h4 className="text-sm font-medium">Positions & Progression</h4>
+                <div className="mt-2 text-sm text-muted-foreground">
+                  {((experience as any).positions && (experience as any).positions.length > 0) ? (
+                    <ul className="list-disc pl-5">
+                      {(experience as any).positions.map((p: string, i: number) => (
+                        <li key={i}>{p}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="italic">No progression data available — replace with actual positions.</p>
+                  )}
+                </div>
               </div>
 
               {/* Footer - Location & Time centered */}

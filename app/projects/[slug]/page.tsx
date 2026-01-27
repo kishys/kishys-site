@@ -8,6 +8,7 @@ import { useState, useEffect, use } from "react";
 import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
 import { HiDocumentText } from "react-icons/hi2";
 import { FiSun, FiMoon, FiExternalLink, FiArrowLeft } from "react-icons/fi";
+import { FaGithub } from "react-icons/fa";
 import { useTheme } from "@/components/theme-provider";
 import { CommandPaletteTrigger } from "@/components/command-palette";
 
@@ -106,24 +107,6 @@ export default function Page(props: {
               <div className="space-y-2">
                 <div className="flex items-center gap-3">
                   <h1 className="text-2xl font-semibold">{title}</h1>
-                  <div className="flex items-center gap-2">
-                    <Link
-                      href={`https://github.com/kishys/${cleanTitle}`}
-                      target="_blank"
-                      className="text-muted-foreground hover:text-accent transition-colors"
-                    >
-                      <SiGithub className="w-4 h-4" />
-                    </Link>
-                    {href && (
-                      <Link
-                        href={href}
-                        target="_blank"
-                        className="text-muted-foreground hover:text-accent transition-colors"
-                      >
-                        <FiExternalLink className="w-4 h-4" />
-                      </Link>
-                    )}
-                  </div>
                 </div>
                 <p className="text-sm text-accent">{date}</p>
               </div>
@@ -136,6 +119,30 @@ export default function Page(props: {
                   fill
                   className="object-cover"
                 />
+              </div>
+
+              {/* Centered Repo/Website icons like experiences */}
+              <div className="flex gap-3 justify-center mt-3">
+                <a
+                  href={project.repo || `https://github.com/kishys/${cleanTitle}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => { if (!project.repo) { /* allow default to github based on cleanTitle */ } }}
+                  aria-label="Repo"
+                  className="px-3 py-1.5 rounded-md border border-border/50 hover:border-accent hover:text-accent transition-colors flex items-center"
+                >
+                  <FaGithub className="w-5 h-5" />
+                </a>
+                <a
+                  href={project.website || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => { if (!project.website) e.preventDefault(); }}
+                  aria-label="Website"
+                  className="px-3 py-1.5 rounded-md border border-border/50 hover:border-accent hover:text-accent transition-colors flex items-center"
+                >
+                  <FiExternalLink className="w-5 h-5" />
+                </a>
               </div>
 
               {/* Tags */}

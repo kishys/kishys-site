@@ -2,6 +2,8 @@
 import FadeIn from "@/components/fade-in";
 import Template from "@/components/template";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { FiExternalLink, FiCreditCard } from "react-icons/fi";
 import { useState, useEffect } from "react";
 import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
 import { HiDocumentText } from "react-icons/hi2";
@@ -12,6 +14,24 @@ import { CommandPaletteTrigger } from "@/components/command-palette";
 import Background from "./components/background";
 import { experienceData } from "@/data";
 
+function calcDuration(start?: string, end?: string) {
+  if (!start) return "";
+  try {
+    const s = new Date(start);
+    const e = end === "Present" || !end ? new Date() : new Date(end);
+    const years = e.getFullYear() - s.getFullYear();
+    const months = e.getMonth() - s.getMonth();
+    const totalMonths = years * 12 + months;
+    if (totalMonths < 0) return "";
+    if (totalMonths < 12) return `${totalMonths} mo${totalMonths !== 1 ? "s" : ""}`;
+    const y = Math.floor(totalMonths / 12);
+    const m = totalMonths % 12;
+    return m === 0 ? `${y} yr${y !== 1 ? "s" : ""}` : `${y} yr ${m} mo`;
+  } catch (e) {
+    return "";
+  }
+}
+
 const socialLinks = [
   { icon: SiGithub, href: "https://github.com/kishys", label: "GitHub" },
   { icon: SiLinkedin, href: "https://www.linkedin.com/in/kishansuhirthan/", label: "LinkedIn" },
@@ -21,6 +41,7 @@ const socialLinks = [
 
 export default function Page() {
   const { theme, toggleTheme } = useTheme();
+  const router = useRouter();
   const [time, setTime] = useState("00:00:00");
   const [mounted, setMounted] = useState(false);
 
@@ -100,9 +121,12 @@ export default function Page() {
               {/* Experience List */}
               <div className="space-y-4">
                 {experienceData.map((exp, index) => (
-                  <Link
+                  <div
                     key={index}
-                    href={`/experience/${exp.href}`}
+                    role="link"
+                    tabIndex={0}
+                    onClick={() => router.push(`/experience/${exp.href}`)}
+                    onKeyDown={(e) => { if (e.key === "Enter") router.push(`/experience/${exp.href}`); }}
                     className="block group"
                   >
                     <div className="p-4 rounded-lg border border-border/50 hover:border-accent/30 transition-all hover:bg-accent/5">
@@ -115,12 +139,35 @@ export default function Page() {
                             {exp.summary}
                           </p>
                         </div>
-                        <span className="text-xs text-muted-foreground whitespace-nowrap">
-                          {exp.date}
-                        </span>
+                        <div className="text-right">
+                          <div className="text-xs text-muted-foreground whitespace-nowrap">{exp.date}</div>
+                          <div className="text-xs text-muted-foreground mt-1">{calcDuration(exp.startDate, exp.endDate)}</div>
+                          <div className="flex gap-2 justify-end mt-2">
+                            <a
+                              href={exp.website || '#'}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => { if (!exp.website) e.preventDefault(); e.stopPropagation(); }}
+                              aria-label={`${exp.title} website`}
+                              className="px-2 py-1 text-xs rounded-md border border-border/50 hover:border-accent hover:text-accent transition-colors flex items-center"
+                            >
+                              <FiExternalLink className="w-4 h-4" />
+                            </a>
+                            <a
+                              href={exp.vcard || '#'}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => { if (!exp.vcard) e.preventDefault(); e.stopPropagation(); }}
+                              aria-label={`${exp.title} vCard`}
+                              className="px-2 py-1 text-xs rounded-md border border-border/50 hover:border-accent hover:text-accent transition-colors flex items-center"
+                            >
+                              <FiCreditCard className="w-4 h-4" />
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </Link>
+                  </div>
                 ))}
               </div>
 

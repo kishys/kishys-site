@@ -5,6 +5,12 @@ export type ProjectDataProps = {
   date: string;
   href?: string;
   tags: string[];
+  startDate?: string; // ISO date string e.g. 2024-10-01
+  endDate?: string; // ISO date string or 'Present'
+  website?: string;
+  repo?: string;
+  vcard?: string;
+  positions?: string[];
 };
 
 // Experiences data - displayed in the first carousel
@@ -15,8 +21,13 @@ export const experienceData: ProjectDataProps[] = [
       "Full-stack e-commerce solution with real-time inventory management, secure payment processing, and advanced search functionality. Built with modern React patterns and scalable backend architecture.",
     summary:
       "STEM based Non-Profit Presentation, Workshops, and Website Development",
-    date: "2024 - Present",
+    date: "Oct 2024 - Present",
     href: "innovire",
+    startDate: "2024-10-01",
+    endDate: "Present",
+    website: "https://example.com/innovire", // placeholder, replace with real URL
+    vcard: "#", // placeholder vCard link
+    positions: ["Web Developer", "Logistics Coordinator"],
     tags: ["React", "Node.js", "MongoDB", "Express.js", "Stripe", "TypeScript"],
   },
   {
@@ -25,27 +36,42 @@ export const experienceData: ProjectDataProps[] = [
       "Enterprise-grade task management application with real-time collaboration features, role-based access control, and comprehensive analytics dashboard. Implemented using microservices architecture.",
     summary:
       "Level NCO, Operations and Supply, Flight Senior + Section Commander",
+    date: "Nov 2021 - Present",
     href: "fsgtnco",
-    tags: ["Next.js","PostgreSQL","Redis","WebSocket","TypeScript","TailwindCSS","Docker",],
-    date: "2024",
+    startDate: "2021-11-01",
+    endDate: "Present",
+    website: "#",
+    vcard: "#",
+    positions: ["Flight Sergeant", "Section Commander"],
+    tags: ["Next.js","PostgreSQL","Redis","WebSocket","TypeScript","TailwindCSS","Docker"],
   },
   {
     title: "Lifeguard & Aquatics Instructor",
     description:
       "Automated deployment pipeline and infrastructure management tools for cloud services. Streamlined DevOps workflows with infrastructure as code and continuous integration/deployment.",
     summary: "TBM",
+    date: "Sep 2025 - Present",
     href: "lifeguard",
-    tags: ["AWS","Terraform","Jenkins","Docker","Kubernetes","Python",],
-    date: "2023",
+    startDate: "2025-09-01",
+    endDate: "Present",
+    website: "#",
+    vcard: "#",
+    positions: ["Lifeguard", "Aquatics Instructor"],
+    tags: ["AWS","Terraform","Jenkins","Docker","Kubernetes","Python"],
   },
   {
     title: "FRC Team 1325 - Mechanical Member",
     description:
       "Interactive data visualization platform with real-time metrics and customizable dashboards. Processes large datasets efficiently with optimized queries and caching strategies.",
     summary: "Working on Mechatronics Subsystem on Playing Robot",
+    date: "Sep 2025 - Present",
     href: "team1325",
+    startDate: "2025-09-01",
+    endDate: "Present",
+    website: "#",
+    vcard: "#",
+    positions: ["Mechanical Member", "Fabrication"],
     tags: ["React", "D3.js", "Node.js", "PostgreSQL", "Redis", "TypeScript"],
-    date: "2023",
   },
   {
     title: "Deputy Executive Director - DrInterested",
@@ -53,9 +79,14 @@ export const experienceData: ProjectDataProps[] = [
       "Cross-platform mobile application with offline-first architecture and seamless cloud synchronization. Features include push notifications, geolocation services, and secure authentication.",
     summary:
       "Leading key departments to drive organizational success",
+    date: "Dec 2024 - Present",
     href: "drint",
+    startDate: "2024-12-01",
+    endDate: "Present",
+    website: "https://example.com/drint", // placeholder
+    vcard: "#",
+    positions: ["Deputy Executive Director"],
     tags: ["React Native","Expo","Firebase","TypeScript","Redux"],
-    date: "2022",
   },
 ];
 

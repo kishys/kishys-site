@@ -2,6 +2,9 @@
 import FadeIn from "@/components/fade-in";
 import Template from "@/components/template";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 import { useState, useEffect } from "react";
 import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
 import { HiDocumentText } from "react-icons/hi2";
@@ -21,6 +24,7 @@ const socialLinks = [
 
 export default function Page() {
   const { theme, toggleTheme } = useTheme();
+  const router = useRouter();
   const [time, setTime] = useState("00:00:00");
   const [mounted, setMounted] = useState(false);
 
@@ -105,9 +109,12 @@ export default function Page() {
                 {projectData.map((project, index) => {
                   const slug = project.title.toLowerCase().replaceAll(" ", "-");
                   return (
-                    <Link
+                    <div
                       key={index}
-                      href={`/projects/${slug}`}
+                      role="link"
+                      tabIndex={0}
+                      onClick={() => router.push(`/projects/${slug}`)}
+                      onKeyDown={(e) => { if (e.key === "Enter") router.push(`/projects/${slug}`); }}
                       className="block group"
                     >
                       <div className="p-4 rounded-lg border border-border/50 hover:border-accent/30 transition-all hover:bg-accent/5">
@@ -120,12 +127,34 @@ export default function Page() {
                               {project.summary}
                             </p>
                           </div>
-                          <span className="text-xs text-muted-foreground whitespace-nowrap">
-                            {project.date}
-                          </span>
+                          <div className="text-right">
+                            <div className="text-xs text-muted-foreground whitespace-nowrap">{project.date}</div>
+                            <div className="flex gap-2 justify-end mt-2">
+                              <a
+                                href={project.repo || '#'}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => { if (!project.repo) e.preventDefault(); e.stopPropagation(); }}
+                                aria-label={`${project.title} repo`}
+                                className="px-2 py-1 text-xs rounded-md border border-border/50 hover:border-accent hover:text-accent transition-colors flex items-center"
+                              >
+                                <FaGithub className="w-4 h-4" />
+                              </a>
+                              <a
+                                href={project.website || '#'}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => { if (!project.website) e.preventDefault(); e.stopPropagation(); }}
+                                aria-label={`${project.title} website`}
+                                className="px-2 py-1 text-xs rounded-md border border-border/50 hover:border-accent hover:text-accent transition-colors flex items-center"
+                              >
+                                <FiExternalLink className="w-4 h-4" />
+                              </a>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </Link>
+                    </div>
                   );
                 })}
               </div>
