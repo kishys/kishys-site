@@ -62,8 +62,8 @@ export const experienceData: ProjectDataProps[] = [
     href: "drint",
     startDate: "2024-12-01",
     endDate: "Present",
-    website: "https://example.com/drint", // placeholder
-    vcard: "#",
+    website: "https://www.drinterested.org", // placeholder
+    vcard: "https://kishan-drint-card.vercel.app",
     positions: [
       { title: "Deputy Executive Director", date: "Apr 2025 - Present" },
       { title: "Director of Technology", date: "Dec 2024 - Apr 2025" },
@@ -110,27 +110,4 @@ export const experienceData: ProjectDataProps[] = [
 ];
 
 // Projects data - displayed in the second carousel
-export const projectData: ProjectDataProps[] = [
-  {
-    title: "Edura AI",
-    description:
-      "Edura, an AI powered learning assistant with a website and Discord bot that offers tutoring, study tools, and personalized resources, overcoming technical challenges while gaining hands on experience with APIs, NextJS, and competitive programming.",
-    summary:
-      "AI Education Chat Bot",
-    tags: ["Node.js", "Docker"],
-    date: "2024",
-    website: "https://eduraai.vercel.app",
-    repo: "https://github.com/arghya-v/edura",
-  },
-  {
-    title: "TaskOwner",
-    description:
-      "TaskOwner is a simple, login free task manager that automatically saves your tasks and includes a real time clock to help you stay organized and productive.",
-    summary: "Time Management Website",
-    tags: ["Node.js", "Docker"],
-    date: "2024",
-    website: "https://taskowner.vercel.app",
-    repo: "https://github.com/kishys/taskowner-website",
-  },
-
-];
+export const projectData: ProjectDataProps[] = [];
