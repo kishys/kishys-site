@@ -153,28 +153,28 @@ export default function Hero() {
             <div className="ml-4 space-y-1 text-muted-foreground">
               <div className="flex items-center gap-2">
                 <span className="text-sm">└</span>
-                <span>Logistics & Web Dev</span>
+                <span>Mechanical Member -</span>
+                <Link href="/experience/team1325" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors">FRC Team 1325</Link>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-sm">└</span>
+                <span>Logistics Team -</span>
                 <Link href="/experience/innovire" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors">Innovire</Link>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-sm">└</span>
-                <span>Flight Sergeant</span>
-                <Link href="/experience/fsgtnco" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors">RCAirCS</Link>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-sm">└</span>
-                <span>Deputy Director</span>
+                <span>Deputy Executive Director -</span>
                 <Link href="/experience/drint" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors">DrInterested</Link>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-sm">└</span>
-                <span>Lifeguard & Instructor</span>
-                <Link href="/experience/lifeguard" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors">Aquatics</Link>
+                <span>Flight Sergeant -</span>
+                <Link href="/experience/fsgtnco" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors">RCAirCS</Link>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-sm">└</span>
-                <span>Mechanical Member</span>
-                <Link href="/experience/team1325" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors">FRC Team 1325</Link>
+                <span>Lifeguard & Instructor -</span>
+                <Link href="/experience/lifeguard" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors">City of Mississauga</Link>
               </div>
             </div>
           </div>
@@ -207,7 +207,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="ml-4">
-              <span className="text-xs px-2 py-0.5 bg-accent/20 text-accent rounded border border-accent/30">coming soon</span>
+              <span className="text-xs px-2 py-0.5 bg-accent/20 text-accent rounded border border-accent/30">more coming soon</span>
             </div>
           </div>
         </div>

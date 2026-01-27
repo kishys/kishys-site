@@ -90,7 +90,7 @@ export default function Page() {
               <div className="space-y-2">
                 <div className="flex items-center gap-3">
                   <h1 className="text-3xl font-semibold">Projects</h1>
-                  <span className="text-xs px-2 py-0.5 bg-accent/20 text-accent rounded border border-accent/30">coming soon</span>
+                  <span className="text-xs px-2 py-0.5 bg-accent/20 text-accent rounded border border-accent/30">more coming soon</span>
                 </div>
                 <p className="text-muted-foreground">
                   View all projects on{" "}

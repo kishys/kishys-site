@@ -1,3 +1,5 @@
+export type PositionItem = string | { title: string; date?: string };
+
 export type ProjectDataProps = {
   title: string;
   description: string;
@@ -10,172 +12,125 @@ export type ProjectDataProps = {
   website?: string;
   repo?: string;
   vcard?: string;
-  positions?: string[];
+  positions?: PositionItem[];
 };
 
 // Experiences data - displayed in the first carousel
 export const experienceData: ProjectDataProps[] = [
   {
-    title: "Innovire Logistics Team + Web Developer",
-    description:
-      "Full-stack e-commerce solution with real-time inventory management, secure payment processing, and advanced search functionality. Built with modern React patterns and scalable backend architecture.",
-    summary:
-      "STEM based Non-Profit Presentation, Workshops, and Website Development",
-    date: "Oct 2024 - Present",
-    href: "innovire",
-    startDate: "2024-10-01",
-    endDate: "Present",
-    website: "https://example.com/innovire", // placeholder, replace with real URL
-    vcard: "#", // placeholder vCard link
-    positions: ["Web Developer", "Logistics Coordinator"],
-    tags: ["React", "Node.js", "MongoDB", "Express.js", "Stripe", "TypeScript"],
-  },
-  {
-    title: "RCAirCS Flight Sergeant",
-    description:
-      "Enterprise-grade task management application with real-time collaboration features, role-based access control, and comprehensive analytics dashboard. Implemented using microservices architecture.",
-    summary:
-      "Level NCO, Operations and Supply, Flight Senior + Section Commander",
-    date: "Nov 2021 - Present",
-    href: "fsgtnco",
-    startDate: "2021-11-01",
-    endDate: "Present",
-    website: "#",
-    vcard: "#",
-    positions: ["Flight Sergeant", "Section Commander"],
-    tags: ["Next.js","PostgreSQL","Redis","WebSocket","TypeScript","TailwindCSS","Docker"],
-  },
-  {
-    title: "Lifeguard & Aquatics Instructor",
-    description:
-      "Automated deployment pipeline and infrastructure management tools for cloud services. Streamlined DevOps workflows with infrastructure as code and continuous integration/deployment.",
-    summary: "TBM",
-    date: "Sep 2025 - Present",
-    href: "lifeguard",
-    startDate: "2025-09-01",
-    endDate: "Present",
-    website: "#",
-    vcard: "#",
-    positions: ["Lifeguard", "Aquatics Instructor"],
-    tags: ["AWS","Terraform","Jenkins","Docker","Kubernetes","Python"],
-  },
-  {
     title: "FRC Team 1325 - Mechanical Member",
     description:
-      "Interactive data visualization platform with real-time metrics and customizable dashboards. Processes large datasets efficiently with optimized queries and caching strategies.",
-    summary: "Working on Mechatronics Subsystem on Playing Robot",
+      "Joining this team to deepen my understanding of robotics, collaborate on innovative projects, and gain real-world experience in engineering and creative problem-solving for the 2025–2026 season, with a focus on working in the mechanical subteam and contributing to the design, construction, and testing of key robot subsystems.",
+    summary: "Mechanical Subteam",
     date: "Sep 2025 - Present",
     href: "team1325",
     startDate: "2025-09-01",
     endDate: "Present",
     website: "#",
     vcard: "#",
-    positions: ["Mechanical Member", "Fabrication"],
+    positions: [
+      { title: "Mechanical Subteam", date: "Oct 2025 - Present" },
+    ],
     tags: ["React", "D3.js", "Node.js", "PostgreSQL", "Redis", "TypeScript"],
+  },
+  {
+    title: "Innovire Logistics Team + Web Developer",
+    description:
+      "Over 50 youth were impacted through interactive STEM presentations and hands-on workshops designed to foster interest in science and aviation. Weekly collaboration meetings supported effective teamwork and clear communication. An aviation-based educational workshop was developed, and community events were organized in partnership with multiple organizations to enhance outreach and engagement.",
+      
+    summary:
+      "STEM based Non-Profit Presentation, Workshops, and Website Development",
+    date: "Oct 2024 - Present",
+    href: "innovire",
+    startDate: "2024-10-01",
+    endDate: "Present",
+    website: "https://innovire.ca", // placeholder, replace with real URL
+    vcard: "https://kishan-innovire-card.vercel.app", // placeholder vCard link
+    positions: [
+      { title: "Web Developer", date: "Sep 2025 - Present" },
+      { title: "Logistics", date: "Oct 2024 - Present" },
+    ],
+    tags: ["React", "Node.js", "MongoDB", "Express.js", "Stripe", "TypeScript"],
   },
   {
     title: "Deputy Executive Director - DrInterested",
     description:
-      "Cross-platform mobile application with offline-first architecture and seamless cloud synchronization. Features include push notifications, geolocation services, and secure authentication.",
+      "Leading three key departments including Technology, Finance, and Events, with a focus on organizational leadership, strategic communication, and cross functional collaboration. Committed to fostering innovation, empowering teams, aligning efforts with the organization’s mission, and planning and executing major events to drive engagement, growth, and overall impact for Dr. Interested.",
     summary:
-      "Leading key departments to drive organizational success",
+      "Deputy Executive Director | Vice President",
     date: "Dec 2024 - Present",
     href: "drint",
     startDate: "2024-12-01",
     endDate: "Present",
     website: "https://example.com/drint", // placeholder
     vcard: "#",
-    positions: ["Deputy Executive Director"],
+    positions: [
+      { title: "Deputy Executive Director", date: "Apr 2025 - Present" },
+      { title: "Director of Technology", date: "Dec 2024 - Apr 2025" },
+    ],
     tags: ["React Native","Expo","Firebase","TypeScript","Redux"],
+  },
+  {
+    title: "RCAirCS Flight Sergeant",
+    description:
+      "Supports the instruction and supervision of cadets aged 12–16 by assisting officers and instructors in delivering lessons in areas such as aviation, survival skills, and required Performance Objectives (POs). Plays a key role in organizing flight drills, mentoring junior cadets, maintaining uniform standards and deportment, and promoting confidence and professionalism. Acts as a communication link between section leaders and officers to ensure effective training and leadership development.",
+    summary:
+      "Flight Sergeant | Level 2 Non-Commissioned Officer | Operations and Supply Team",
+    date: "Nov 2021 - Present",
+    href: "fsgtnco",
+    startDate: "2021-11-01",
+    endDate: "Present",
+    website: "#",
+    vcard: "#",
+    // Example with custom per-position dates: each item can be a string or an object
+    positions: [
+      { title: "Flight Sergeant", date: "Oct 2025 - Present" },
+      { title: "Section Commander", date: "Nov 2024 - Present" },
+      { title: "Operations and Supply", date: "Nov 2024 - Present" },
+      { title: "Air Cadet", date: "Nov 2021 - Present" },
+    ],
+    tags: ["Next.js","PostgreSQL","Redis","WebSocket","TypeScript","TailwindCSS","Docker"],
+  },
+  {
+    title: "Lifeguard & Aquatics Instructor",
+    description:
+      "Ensures that community pools remain safe, supportive, and enjoyable for swimmers of all ages. Provides swim instruction to all ages, maintains oversight of aquatic safety, and supports community fitness and learning through structured aquatic programs.",
+    summary: "City of Mississauga",
+    date: "Sep 2025 - Present",
+    href: "lifeguard",
+    startDate: "2025-09-01",
+    endDate: "Present",
+    website: "#",
+    vcard: "#",
+    positions: [
+      { title: "Aquatics Instructor", date: "Sep 2025 - Present" },
+    ],
+    tags: ["AWS","Terraform","Jenkins","Docker","Kubernetes","Python"],
   },
 ];
 
 // Projects data - displayed in the second carousel
 export const projectData: ProjectDataProps[] = [
   {
-    title: "AI Education Chat Bot",
+    title: "Edura AI",
     description:
-      "Scalable API gateway with rate limiting, authentication, and request routing. Handles high-traffic loads with efficient caching and load balancing strategies.",
+      "Edura, an AI powered learning assistant with a website and Discord bot that offers tutoring, study tools, and personalized resources, overcoming technical challenges while gaining hands on experience with APIs, NextJS, and competitive programming.",
     summary:
-      "High-performance API gateway with advanced routing",
-    tags: ["Node.js", "Express.js", "Redis", "JWT", "Docker", "Nginx"],
+      "AI Education Chat Bot",
+    tags: ["Node.js", "Docker"],
     date: "2024",
+    website: "https://eduraai.vercel.app",
+    repo: "https://github.com/arghya-v/edura",
   },
   {
-    title: "Time Management Website",
+    title: "TaskOwner",
     description:
-      "End-to-end ML pipeline for data processing, model training, and deployment. Automated workflows for continuous model improvement and monitoring.",
-    summary: "Automated ML pipeline with monitoring",
-    tags: [
-      "Python",
-      "TensorFlow",
-      "Scikit-learn",
-      "Docker",
-      "Kubernetes",
-      "AWS",
-    ],
-    date: "2023",
+      "TaskOwner is a simple, login free task manager that automatically saves your tasks and includes a real time clock to help you stay organized and productive.",
+    summary: "Time Management Website",
+    tags: ["Node.js", "Docker"],
+    date: "2024",
+    website: "https://taskowner.vercel.app",
+    repo: "https://github.com/kishys/taskowner-website",
   },
-  {
-    title: "Microservices Architecture",
-    description:
-      "Distributed microservices system with event-driven architecture and message queuing. Implemented service discovery, circuit breakers, and distributed tracing.",
-    summary: "Event-driven microservices with distributed tracing",
-    tags: [
-      "Node.js",
-      "RabbitMQ",
-      "Docker",
-      "Kubernetes",
-      "MongoDB",
-      "Prometheus",
-    ],
-    date: "2023",
-  },
-  {
-    title: "Progressive Web App",
-    description:
-      "Modern PWA with offline functionality, push notifications, and app-like experience. Optimized for performance with service workers and lazy loading.",
-    summary:
-      "Offline-first PWA with native app features",
-    tags: [
-      "React",
-      "Service Workers",
-      "IndexedDB",
-      "TypeScript",
-      "Webpack",
-    ],
-    date: "2022",
-  },
-  {
-    title: "Blockchain Integration",
-    description:
-      "Decentralized application with smart contract integration and cryptocurrency payment processing. Secure transactions with wallet connectivity.",
-    summary:
-      "DApp with smart contracts and crypto payments",
-    tags: [
-      "Solidity",
-      "Web3.js",
-      "Ethereum",
-      "React",
-      "TypeScript",
-      "MetaMask",
-    ],
-    date: "2022",
-  },
-  {
-    title: "Integration",
-    description:
-      "Decentralized application with smart contract integration and cryptocurrency payment processing. Secure transactions with wallet connectivity.",
-    summary:
-      "DApp with smart contracts and crypto payments",
-    tags: [
-      "Solidity",
-      "Web3.js",
-      "Ethereum",
-      "React",
-      "TypeScript",
-      "MetaMask",
-    ],
-    date: "2022",
-  },
+
 ];

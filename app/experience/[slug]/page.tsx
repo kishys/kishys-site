@@ -173,10 +173,17 @@ export default function Page(props: {
                 <h4 className="text-sm font-medium">Positions & Progression</h4>
                 <div className="mt-2 text-sm text-muted-foreground">
                   {((experience as any).positions && (experience as any).positions.length > 0) ? (
-                    <ul className="list-disc pl-5">
-                      {(experience as any).positions.map((p: string, i: number) => (
-                        <li key={i}>{p}</li>
-                      ))}
+                    <ul className="space-y-3">
+                      {(experience as any).positions.map((pos: any, i: number) => {
+                        const title = typeof pos === "string" ? pos : pos.title;
+                        const posDate = typeof pos === "string" ? date : (pos.date || date);
+                        return (
+                          <li key={i} className="flex items-center justify-between">
+                            <span>{title}</span>
+                            <span className="text-xs text-muted-foreground whitespace-nowrap">{posDate}</span>
+                          </li>
+                        );
+                      })}
                     </ul>
                   ) : (
                     <p className="italic">No progression data available — replace with actual positions.</p>
