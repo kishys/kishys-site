@@ -25,7 +25,7 @@ export const experienceData: ProjectDataProps[] = [
       "Enterprise-grade task management application with real-time collaboration features, role-based access control, and comprehensive analytics dashboard. Implemented using microservices architecture.",
     summary:
       "Level NCO, Operations and Supply, Flight Senior + Section Commander",
-    href: "fsgt",
+    href: "fsgtnco",
     tags: ["Next.js","PostgreSQL","Redis","WebSocket","TypeScript","TailwindCSS","Docker",],
     date: "2024",
   },

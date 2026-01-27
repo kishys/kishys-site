@@ -11,7 +11,6 @@ import { useTheme } from "@/components/theme-provider";
 import MobileMenu from "@/components/mobile-menu";
 
 export default function Navbar() {
-  const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
   const { theme, toggleTheme } = useTheme();
   const [time, setTime] = useState("00:00:00");
   const [mounted, setMounted] = useState(false);
@@ -82,41 +81,22 @@ export default function Navbar() {
       key={link.id}
       href={link.href}
       target={link.id !== "email" ? "_blank" : undefined}
-      className="group relative flex items-center transition-colors hover:text-accent"
-      onMouseEnter={() => setHoveredIcon(link.id)}
-      onMouseLeave={() => setHoveredIcon(null)}
+      className="transition-colors hover:text-accent"
     >
-      <span className="relative z-10">
-        {link.icon}
-      </span>
-      <span 
-        className={`absolute left-8 whitespace-nowrap text-base font-medium transition-opacity duration-700 ease-out ${
-          hoveredIcon === link.id 
-            ? "opacity-100" 
-            : "opacity-0 pointer-events-none"
-        }`}
-      >
-        {link.label}
-      </span>
+      {link.icon}
     </Link>
   );
 
   return (
     <BentoCard className="flex items-center justify-between !px-4 !py-4 md:!px-8 md:!py-6">
-      {/* Left section - Name/Location */}
+      {/* Left section - Name */}
       <div className="hidden md:block">
-        {isDetailPage ? (
-          <Link 
-            href="/" 
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-accent"
-          >
-            Kishan Suhirthan
-          </Link>
-        ) : (
-          <span className="text-sm font-medium text-muted-foreground">
-            Toronto, CA
-          </span>
-        )}
+        <Link 
+          href="/" 
+          className="text-sm font-medium text-muted-foreground transition-colors hover:text-accent"
+        >
+          Kishan Suhirthan
+        </Link>
       </div>
 
       {/* Mobile menu - visible only on mobile */}
