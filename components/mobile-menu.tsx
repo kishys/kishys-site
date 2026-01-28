@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { openAndDownload } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
 import { HiDocumentText } from "react-icons/hi2";
@@ -37,7 +38,7 @@ export default function MobileMenu() {
       icon: <SiLinkedin />,
     },
     { label: "Gmail", href: "mailto:kishansuhirthan@gmail.com", icon: <SiGmail /> },
-    { label: "Resume", href: "/resume.pdf", icon: <HiDocumentText /> },
+    { label: "Resume", href: "/Kishan%20Suhirthan%20-%20Resume.pdf", icon: <HiDocumentText /> },
   ];
 
   return (
@@ -73,6 +74,22 @@ export default function MobileMenu() {
               <div className="space-y-2">
                 {menuLinks.map((link) => {
                   const isExternal = link.href.startsWith("http") || link.href.startsWith("mailto");
+                  if (link.label === "Resume") {
+                    return (
+                      <button
+                        key={link.label}
+                        onClick={() => {
+                          openAndDownload(link.href, "Kishan Suhirthan - Resume.pdf");
+                          setOpen(false);
+                        }}
+                        className="flex items-center gap-3 rounded-lg border border-accent/10 bg-accent/5 px-4 py-3 text-sm font-medium text-muted-foreground transition-all hover:border-accent/30 hover:bg-accent/10 hover:text-accent"
+                      >
+                        <span className="text-lg flex-shrink-0">{link.icon}</span>
+                        <span>{link.label}</span>
+                      </button>
+                    );
+                  }
+
                   return (
                     <Link
                       key={link.label}

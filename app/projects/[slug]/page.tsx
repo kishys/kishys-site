@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, use } from "react";
 import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
+import { openAndDownload } from "@/lib/utils";
 import { HiDocumentText } from "react-icons/hi2";
 import { FiSun, FiMoon, FiExternalLink, FiArrowLeft } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
@@ -16,7 +17,7 @@ const socialLinks = [
   { icon: SiGithub, href: "https://github.com/kishys", label: "GitHub" },
   { icon: SiLinkedin, href: "https://www.linkedin.com/in/kishansuhirthan/", label: "LinkedIn" },
   { icon: SiGmail, href: "mailto:kishansuhirthan@gmail.com", label: "Email" },
-  { icon: HiDocumentText, href: "/resume.pdf", label: "Resume" },
+  { icon: HiDocumentText, href: "/Kishan%20Suhirthan%20-%20Resume.pdf", label: "Resume" },
 ];
 
 export default function Page(props: {
@@ -73,16 +74,31 @@ export default function Page(props: {
               {/* Top Nav - Socials, Back, Theme, Command */}
               <div className="flex items-center justify-between text-sm">
                 <div className="flex items-center gap-6 text-lg text-muted-foreground">
-                  {socialLinks.map(({ icon: Icon, href, label }) => (
-                    <Link
-                      key={label}
-                      href={href}
-                      target={label !== "Email" ? "_blank" : undefined}
-                      className="hover:text-accent transition-colors"
-                    >
-                      <Icon />
-                    </Link>
-                  ))}
+                  {socialLinks.map(({ icon: Icon, href, label }) => {
+                    if (label === "Resume") {
+                      return (
+                        <button
+                          key={label}
+                          onClick={() => openAndDownload(href, "Kishan Suhirthan - Resume.pdf")}
+                          className="hover:text-accent transition-colors"
+                          aria-label="Open resume"
+                        >
+                          <Icon />
+                        </button>
+                      );
+                    }
+
+                    return (
+                      <Link
+                        key={label}
+                        href={href}
+                        target={label !== "Email" ? "_blank" : undefined}
+                        className="hover:text-accent transition-colors"
+                      >
+                        <Icon />
+                      </Link>
+                    );
+                  })}
                 </div>
                 <Link
                   href="/projects"
@@ -169,6 +185,8 @@ export default function Page(props: {
                   <span>Toronto, CA</span>
                   <span>•</span>
                   <span className="font-mono tabular-nums">{mounted ? `${time} EST` : "00:00:00 EST"}</span>
+                  <span>•</span>
+                  <span>Kishan Suhirthan</span>
                 </div>
               </div>
             </div>

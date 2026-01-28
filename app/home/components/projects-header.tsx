@@ -12,10 +12,10 @@ export default function ProjectsHeader() {
   return (
     <Link href="/projects" className="block group">
       <BentoCard className="!px-8 !py-6 transition-all duration-300 group-hover:border-accent/30 group-hover:shadow-[0_0_30px_-10px_hsl(var(--accent)/0.3)] relative overflow-hidden">
-        {/* More Coming Soon Badge */}
+        {/* coming soon Badge */}
         <div className="absolute top-3 right-3 z-20">
           <span className="px-2 py-1 text-xs font-medium bg-accent/20 text-accent rounded-full border border-accent/30">
-            More Coming Soon
+            coming soon
           </span>
         </div>
         <div className="inline-flex w-full overflow-hidden text-5xl font-semibold tracking-widest [mask-image:_linear-gradient(to_right,transparent_0,_black_24px,_black_calc(100%-24px),transparent_100%)] sm:[mask-image:_linear-gradient(to_right,transparent_0,_black_144px,_black_calc(100%-144px),transparent_100%)]">

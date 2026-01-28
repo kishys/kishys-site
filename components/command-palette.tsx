@@ -18,6 +18,7 @@ import {
 } from "react-icons/fi";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { useTheme } from "@/components/theme-provider";
+import { openAndDownload } from "@/lib/utils";
 
 interface CommandPaletteProps {
   open: boolean;
@@ -112,7 +113,7 @@ export default function CommandPalette({ open, onOpenChange }: CommandPalettePro
           label: "Resume",
           shortcut: "R",
           action: () => {
-            window.open("/resume.pdf", "_blank");
+            openAndDownload("/Kishan%20Suhirthan%20-%20Resume.pdf", "Kishan Suhirthan - Resume.pdf");
             onOpenChange(false);
           },
         },
@@ -368,7 +369,7 @@ export function CommandPaletteProvider({ children }: { children: React.ReactNode
 }
 
 // Trigger button component - just a visual button, global shortcuts handle the actual opening
-export function CommandPaletteTrigger({ className }: { className?: string }) {
+export function CommandPaletteTrigger({ className, variant }: { className?: string; variant?: "kbd" | "button" }) {
   const handleClick = () => {
     // Dispatch a keyboard event to trigger the global shortcut handler
     const event = new KeyboardEvent("keydown", {
@@ -378,6 +379,22 @@ export function CommandPaletteTrigger({ className }: { className?: string }) {
     });
     document.dispatchEvent(event);
   };
+
+  if (variant === "button") {
+    return (
+      <button
+        onClick={handleClick}
+        className={cn(
+          "flex items-center gap-2 rounded-xl border border-accent/20 bg-accent/5 px-3 py-1.5 text-sm text-muted-foreground transition-all hover:border-accent/40 hover:bg-accent/10 hover:text-foreground hover:shadow-[0_0_20px_-8px_hsl(var(--accent)/0.5)]",
+          className
+        )}
+        aria-label="Open Command Center"
+      >
+        <FiCommand className="h-4 w-4 text-accent" />
+        <span className="font-medium">Command</span>
+      </button>
+    );
+  }
 
   return (
     <button

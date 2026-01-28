@@ -1,6 +1,7 @@
 "use client";
 import BentoCard from "@/components/bento-card";
 import Link from "next/link";
+import { openAndDownload } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
 import { HiDocumentText, HiHome } from "react-icons/hi2";
@@ -71,20 +72,31 @@ export default function Navbar() {
     { 
       icon: <HiDocumentText />, 
       label: "Resume", 
-      href: "/resume.pdf",
+      href: "/Kishan%20Suhirthan%20-%20Resume.pdf",
       id: "resume"
     },
   ];
 
   const renderLink = (link: typeof leftLinks[0]) => (
-    <Link
-      key={link.id}
-      href={link.href}
-      target={link.id !== "email" ? "_blank" : undefined}
-      className="transition-colors hover:text-accent"
-    >
-      {link.icon}
-    </Link>
+    link.id === "resume" ? (
+      <button
+        key={link.id}
+        onClick={() => openAndDownload(link.href, "Kishan Suhirthan - Resume.pdf")}
+        className="transition-colors hover:text-accent"
+        aria-label="Open resume"
+      >
+        {link.icon}
+      </button>
+    ) : (
+      <Link
+        key={link.id}
+        href={link.href}
+        target={link.id !== "email" ? "_blank" : undefined}
+        className="transition-colors hover:text-accent"
+      >
+        {link.icon}
+      </Link>
+    )
   );
 
   return (
@@ -93,6 +105,7 @@ export default function Navbar() {
       <div className="hidden md:block">
         <Link 
           href="/" 
+          prefetch={true}
           className="text-sm font-medium text-muted-foreground transition-colors hover:text-accent"
         >
           Kishan Suhirthan
@@ -104,16 +117,19 @@ export default function Navbar() {
         <MobileMenu />
       </div>
       
-      {/* Center section - Time visible on mobile */}
-      <span className="md:hidden font-mono text-xs font-medium text-muted-foreground tabular-nums">
-        {mounted ? `${time} EST` : "00:00:00 EST"}
-      </span>
+      {/* Center section - Time visible on mobile (with name to the right) */}
+      <div className="md:hidden flex items-center gap-2 text-xs font-medium text-muted-foreground">
+        <span className="font-mono tabular-nums">{mounted ? `${time} EST` : "00:00:00 EST"}</span>
+        <span>•</span>
+        <span className="text-sm">Kishan Suhirthan</span>
+      </div>
       
       {/* Center section - Desktop */}
       {isMainSubPage ? (
         // Home icon for experience/projects main pages
         <Link 
           href="/"
+          prefetch={true}
           className="group hidden md:flex items-center gap-2 rounded-xl border border-accent/20 bg-accent/5 px-4 py-2 text-muted-foreground transition-all duration-300 hover:border-accent/40 hover:bg-accent/10 hover:text-accent hover:shadow-[0_0_20px_-8px_hsl(var(--accent)/0.5)] hover:scale-105"
         >
           <HiHome className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110" />
@@ -122,9 +138,11 @@ export default function Navbar() {
         </Link>
       ) : isDetailPage ? (
         // Clock for detail pages (desktop only, mobile shows in center)
-        <span className="font-mono text-sm font-medium text-muted-foreground tabular-nums hidden md:block">
-          {mounted ? `${time} EST` : "00:00:00 EST"}
-        </span>
+        <div className="hidden md:flex items-center gap-2 font-medium text-muted-foreground">
+          <span className="font-mono text-sm tabular-nums">{mounted ? `${time} EST` : "00:00:00 EST"}</span>
+          <span>•</span>
+          <span className="text-sm">Kishan Suhirthan</span>
+        </div>
       ) : (
         // Full navbar with icons for home page
         <div className="hidden md:flex items-center gap-20 text-2xl">
@@ -133,10 +151,12 @@ export default function Navbar() {
             {leftLinks.map(renderLink)}
           </div>
           
-          {/* Clock in the middle */}
-          <span className="font-mono text-sm font-medium text-muted-foreground tabular-nums px-6">
-            {mounted ? `${time} EST` : "00:00:00 EST"}
-          </span>
+          {/* Clock in the middle (with name to the right) */}
+          <div className="font-medium text-muted-foreground tabular-nums px-6 flex items-center gap-2">
+            <span className="font-mono text-sm">{mounted ? `${time} EST` : "00:00:00 EST"}</span>
+            <span>•</span>
+            <span className="text-sm">Kishan Suhirthan</span>
+          </div>
           
           {/* Right icons */}
           <div className="flex items-center gap-20">
@@ -146,7 +166,7 @@ export default function Navbar() {
       )}
       
       {/* Right section - Theme toggle and command palette */}
-      <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3">
         <button
           onClick={toggleTheme}
           className="flex h-9 w-9 items-center justify-center rounded-xl border border-accent/20 bg-accent/5 text-muted-foreground transition-all hover:border-accent/40 hover:bg-accent/10 hover:text-accent hover:shadow-[0_0_20px_-8px_hsl(var(--accent)/0.5)]"
@@ -158,8 +178,12 @@ export default function Navbar() {
             <FiMoon className="h-4 w-4" />
           )}
         </button>
+        {/* Desktop: keyboard hint. Mobile: clickable Command button */}
         <div className="hidden md:block">
           <CommandPaletteTrigger />
+        </div>
+        <div className="md:hidden">
+          <CommandPaletteTrigger variant="button" />
         </div>
       </div>
     </BentoCard>

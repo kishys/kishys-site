@@ -3,6 +3,7 @@
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import { useTheme } from "@/components/theme-provider";
+import { openAndDownload } from "@/lib/utils";
 
 export function GlobalShortcutsProvider({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -66,7 +67,7 @@ export function GlobalShortcutsProvider({ children }: { children: React.ReactNod
           case "R":
             e.preventDefault();
             slashPressed.current = false;
-            window.open("/resume.pdf", "_blank");
+            openAndDownload("/Kishan%20Suhirthan%20-%20Resume.pdf", "Kishan Suhirthan - Resume.pdf");
             break;
           case "T":
             e.preventDefault();
