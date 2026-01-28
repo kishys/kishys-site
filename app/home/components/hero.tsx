@@ -175,7 +175,7 @@ export default function Hero() {
               <div className="flex items-center gap-1 flex-nowrap max-[408px]:flex-col max-[408px]:items-center max-[408px]:text-center">
                 <div className="flex items-center gap-2 whitespace-nowrap max-[408px]:whitespace-normal">
                   <span className="text-sm">└</span>
-                  <span>Mechanical Member</span>
+                  <span>Mechanical Member: </span>
                 </div>
                 <Link href="/experience/team1325" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors whitespace-nowrap max-[408px]:whitespace-normal">
                   FRC Team 1325
@@ -185,7 +185,7 @@ export default function Hero() {
               <div className="flex items-center gap-1 flex-nowrap max-[464px]:items-start max-[464px]:text-left max-[408px]:flex-col max-[408px]:items-center max-[408px]:text-center">
                 <div className="flex items-center gap-2 whitespace-nowrap max-[408px]:whitespace-normal">
                   <span className="text-sm">└</span>
-                  <span>Logistics Team</span>
+                  <span>Logistics Team + Web Dev:</span>
                 </div>
                 <Link href="/experience/innovire" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors whitespace-nowrap max-[408px]:whitespace-normal">
                   Innovire
@@ -195,7 +195,7 @@ export default function Hero() {
               <div className="flex items-center gap-1 flex-nowrap max-[464px]:items-start max-[464px]:text-left max-[408px]:flex-col max-[408px]:items-center max-[408px]:text-center">
                 <div className="flex items-center gap-2 whitespace-nowrap max-[408px]:whitespace-normal">
                   <span className="text-sm">└</span>
-                  <span>Deputy Executive Director</span>
+                  <span>Deputy Executive Director:</span>
                 </div>
                 <Link href="/experience/drint" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors whitespace-nowrap max-[408px]:whitespace-normal">
                   Dr. Interested
@@ -205,7 +205,7 @@ export default function Hero() {
               <div className="flex items-center gap-1 flex-nowrap max-[464px]:items-start max-[464px]:text-left max-[408px]:flex-col max-[408px]:items-center max-[408px]:text-center">
                 <div className="flex items-center gap-2 whitespace-nowrap max-[408px]:whitespace-normal">
                   <span className="text-sm">└</span>
-                  <span>Operations, Logistics, and Growth</span>
+                  <span>Operations, Logistics, and Growth:</span>
                 </div>
                 <Link href="/experience/ex3" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors whitespace-nowrap max-[408px]:whitespace-normal">
                   Explore3
@@ -215,20 +215,10 @@ export default function Hero() {
               <div className="flex items-center gap-1 flex-nowrap max-[464px]:items-start max-[464px]:text-left max-[408px]:flex-col max-[408px]:items-center max-[408px]:text-center">
                 <div className="flex items-center gap-2 whitespace-nowrap max-[408px]:whitespace-normal">
                   <span className="text-sm">└</span>
-                  <span>Flight Sergeant</span>
+                  <span>Flight Sergeant:</span>
                 </div>
                 <Link href="/experience/fsgtnco" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors whitespace-nowrap max-[408px]:whitespace-normal">
                   RCAirCS
-                </Link>
-              </div>
-
-              <div className="flex items-center gap-1 flex-nowrap max-[464px]:items-start max-[464px]:text-left max-[408px]:flex-col max-[408px]:items-center max-[408px]:text-center">
-                <div className="flex items-center gap-2 whitespace-nowrap max-[408px]:whitespace-normal">
-                  <span className="text-sm">└</span>
-                  <span>Lifeguard & Instructor</span>
-                </div>
-                <Link href="/experience/lifeguard" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors whitespace-nowrap max-[408px]:whitespace-normal">
-                  City of Mississauga
                 </Link>
               </div>
             </div>
