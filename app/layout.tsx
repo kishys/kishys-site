@@ -2,6 +2,8 @@ import "@/app/globals.css";
 import NoiseSVG from "@/components/noise-svg";
 import { ThemeProvider } from "@/components/theme-provider";
 import { GlobalShortcutsProvider } from "@/components/global-shortcuts";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
@@ -33,6 +35,8 @@ export default function RootLayout({
             {children}
           </GlobalShortcutsProvider>
         </ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
