@@ -125,15 +125,15 @@ export default function Hero() {
               </div>
             </div>
             <div className="flex flex-col">
-              <span className="font-semibold text-xl">Hey, I&apos;m Kishan</span>
+              <span className="font-semibold text-xl">Hey, I&apos;m Kishan Suhi</span>
               <span className="text-accent text-lg">Building Something New</span>
             </div>
           </div>
 
           {/* Tech Stack */}
           <div className="flex items-center gap-1">
-            <span className="text-muted-foreground">◆</span>
-            <span className="italic text-muted-foreground mr-2">what I like to use:</span>
+            <span className="text-muted-foreground">»</span>
+            <span className="italic text-muted-foreground mr-2">What I like to use:</span>
             <div className="flex items-center gap-3 text-xl">
               {techIcons.map(({ icon: Icon, key }) => (
                 <Icon
@@ -198,7 +198,17 @@ export default function Hero() {
                   <span>Deputy Executive Director</span>
                 </div>
                 <Link href="/experience/drint" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors whitespace-nowrap max-[408px]:whitespace-normal">
-                  DrInterested
+                  Dr. Interested
+                </Link>
+              </div>
+
+              <div className="flex items-center gap-1 flex-nowrap max-[464px]:items-start max-[464px]:text-left max-[408px]:flex-col max-[408px]:items-center max-[408px]:text-center">
+                <div className="flex items-center gap-2 whitespace-nowrap max-[408px]:whitespace-normal">
+                  <span className="text-sm">└</span>
+                  <span>Operations, Logistics, and Growth</span>
+                </div>
+                <Link href="/experience/ex3" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors whitespace-nowrap max-[408px]:whitespace-normal">
+                  Explore3
                 </Link>
               </div>
 

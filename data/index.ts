@@ -21,17 +21,17 @@ export const experienceData: ProjectDataProps[] = [
     title: "FRC Team 1325 - Mechanical Member",
     description:
       "Joining this team to deepen my understanding of robotics, collaborate on innovative projects, and gain real-world experience in engineering and creative problem-solving for the 2025–2026 season, with a focus on working in the mechanical subteam and contributing to the design, construction, and testing of key robot subsystems.",
-    summary: "Mechanical Subteam",
+    summary: "Mechanical Subteam at FIRST Robotics Competition Team 1325 Inverse Paradox",
     date: "Sep 2025 - Present",
     href: "team1325",
     startDate: "2025-09-01",
     endDate: "Present",
-    website: "#",
+    website: "https://www.team1325.com/",
     vcard: "#",
     positions: [
       { title: "Mechanical Subteam", date: "Oct 2025 - Present" },
     ],
-    tags: ["React", "D3.js", "Node.js", "PostgreSQL", "Redis", "TypeScript"],
+    tags: [],
   },
   {
     title: "Innovire Logistics Team + Web Developer",
@@ -50,14 +50,14 @@ export const experienceData: ProjectDataProps[] = [
       { title: "Web Developer", date: "Sep 2025 - Present" },
       { title: "Logistics", date: "Oct 2024 - Present" },
     ],
-    tags: ["React", "Node.js", "MongoDB", "Express.js", "Stripe", "TypeScript"],
+    tags: [],
   },
   {
-    title: "Deputy Executive Director - DrInterested",
+    title: "Deputy Executive Director - Dr. Interested",
     description:
       "Leading three key departments including Technology, Finance, and Events, with a focus on organizational leadership, strategic communication, and cross functional collaboration. Committed to fostering innovation, empowering teams, aligning efforts with the organization’s mission, and planning and executing major events to drive engagement, growth, and overall impact for Dr. Interested.",
     summary:
-      "Deputy Executive Director | Vice President",
+      "Deputy Executive Director | Vice President | Overseeing Technology, Finance, and Events",
     date: "Dec 2024 - Present",
     href: "drint",
     startDate: "2024-12-01",
@@ -68,7 +68,7 @@ export const experienceData: ProjectDataProps[] = [
       { title: "Deputy Executive Director", date: "Apr 2025 - Present" },
       { title: "Director of Technology", date: "Dec 2024 - Apr 2025" },
     ],
-    tags: ["React Native","Expo","Firebase","TypeScript","Redux"],
+    tags: [],
   },
   {
     title: "RCAirCS Flight Sergeant",
@@ -80,32 +80,51 @@ export const experienceData: ProjectDataProps[] = [
     href: "fsgtnco",
     startDate: "2021-11-01",
     endDate: "Present",
-    website: "#",
+    website: "https://www.800squadron.com/",
     vcard: "#",
     // Example with custom per-position dates: each item can be a string or an object
     positions: [
       { title: "Flight Sergeant", date: "Oct 2025 - Present" },
+      { title: "Level 2 Non-Commissioned Officer", date: "Oct 2025 - Present" },
       { title: "Section Commander", date: "Nov 2024 - Present" },
       { title: "Operations and Supply", date: "Nov 2024 - Present" },
+      { title: "General Instructor", date: "Sep 2024 - Present" },
       { title: "Air Cadet", date: "Nov 2021 - Present" },
     ],
-    tags: ["Next.js","PostgreSQL","Redis","WebSocket","TypeScript","TailwindCSS","Docker"],
+    tags: [],
+  },
+  {
+    title: "Operations and Logistics | Building Growth",
+    description:
+      "Operations & Logistics Lead for the EX3 Case Competition, overseeing event coordination, logistics planning, and execution to ensure seamless operations.",
+    summary: "Explore3 Case Competition | Medicine, Law, and Finance",
+    date: "May 2025 - Present",
+    href: "ex3",
+    startDate: "2025-05-01",
+    endDate: "Present",
+    website: "https://explore3.vercel.app/",
+    vcard: "#",
+    positions: [
+      { title: "Building Growth", date: "Dec 2025 - Present" },
+      { title: "Operations and Logistics", date: "May 2025 - Present" }
+    ],
+    tags: [],
   },
   {
     title: "Lifeguard & Aquatics Instructor",
     description:
       "Ensures that community pools remain safe, supportive, and enjoyable for swimmers of all ages. Provides swim instruction to all ages, maintains oversight of aquatic safety, and supports community fitness and learning through structured aquatic programs.",
-    summary: "City of Mississauga",
+    summary: "City of Mississauga | Recreation & Culture Division",
     date: "Sep 2025 - Present",
     href: "lifeguard",
     startDate: "2025-09-01",
     endDate: "Present",
-    website: "#",
+    website: "https://www.mississauga.ca/",
     vcard: "#",
     positions: [
       { title: "Aquatics Instructor", date: "Sep 2025 - Present" },
     ],
-    tags: ["AWS","Terraform","Jenkins","Docker","Kubernetes","Python"],
+    tags: [],
   },
 ];
 
