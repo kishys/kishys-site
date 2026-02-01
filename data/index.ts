@@ -27,7 +27,7 @@ export const experienceData: ProjectDataProps[] = [
     startDate: "2025-09-01",
     endDate: "Present",
     website: "https://www.team1325.com/",
-    vcard: "#",
+    vcard: "https://team1325.kishansuhi.ca/",
     positions: [
       { title: "Mechanical Subteam", date: "Oct 2025 - Present" },
     ],
