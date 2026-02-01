@@ -102,8 +102,8 @@ export const experienceData: ProjectDataProps[] = [
     href: "ex3",
     startDate: "2025-05-01",
     endDate: "Present",
-    website: "https://explore3.vercel.app/",
-    vcard: "#",
+    website: "https://explore3.live/",
+    vcard: "https://explore3.kishansuhi.ca/",
     positions: [
       { title: "Building Growth", date: "Dec 2025 - Present" },
       { title: "Operations and Logistics", date: "May 2025 - Present" }
