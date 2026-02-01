@@ -81,7 +81,7 @@ export const experienceData: ProjectDataProps[] = [
     startDate: "2021-11-01",
     endDate: "Present",
     website: "https://www.800squadron.com/",
-    vcard: "#",
+    vcard: "http://800sqn.kishansuhi.ca/",
     // Example with custom per-position dates: each item can be a string or an object
     positions: [
       { title: "Flight Sergeant", date: "Oct 2025 - Present" },
