@@ -130,3 +130,68 @@ export const experienceData: ProjectDataProps[] = [
 
 // Projects data - displayed in the second carousel
 export const projectData: ProjectDataProps[] = [];
+
+// Posts data types
+export type PostDataProps = {
+  title: string;
+  description: string;
+  date: string;
+  platform: 'substack' | 'medium' | 'linkedin';
+  url: string;
+  excerpt: string;
+  featured?: boolean;
+};
+
+export type PlatformDataProps = {
+  name: string;
+  platform: 'substack' | 'medium' | 'linkedin';
+  title: string;
+  description: string;
+  url: string;
+  logo: string;
+  color: string;
+};
+
+// Sample posts data - replace with your actual posts
+export const postsData: PostDataProps[] = [
+  {
+    title: "My Latest Blog Post",
+    description: "A comprehensive look at my recent thoughts and insights...",
+    date: "2025-02-01",
+    platform: "substack",
+    url: "#",
+    excerpt: "This is where I share my latest thoughts on technology, career development, and personal growth. Join me as I explore the intersection of engineering and innovation.",
+    featured: true,
+  },
+];
+
+// Platform information for your blog platforms
+export const platformsData: PlatformDataProps[] = [
+  {
+    name: "Substack",
+    platform: "substack",
+    title: "Tech & Career Insights",
+    description: "Deep dives into technology trends and career development in engineering.",
+    url: "#", // Replace with your Substack URL
+    logo: "/images/platforms/substack-logo.svg", // Add logo to public/images/platforms/
+    color: "#FF6B35",
+  },
+  {
+    name: "Medium",
+    platform: "medium",
+    title: "Engineering Stories",
+    description: "Technical articles and project breakdowns from my engineering journey.",
+    url: "#", // Replace with your Medium URL
+    logo: "/images/platforms/medium-logo.svg", // Add logo to public/images/platforms/
+    color: "#00AB6C",
+  },
+  {
+    name: "LinkedIn",
+    platform: "linkedin",
+    title: "Professional Updates",
+    description: "Career milestones, industry insights, and professional networking content.",
+    url: "#", // Replace with your LinkedIn URL
+    logo: "/images/platforms/linkedin-logo.svg", // Add logo to public/images/platforms/
+    color: "#0077B5",
+  },
+];
