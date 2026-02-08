@@ -15,6 +15,7 @@ import {
 import { useTheme } from "@/components/theme-provider";
 import { CommandPaletteTrigger } from "@/components/command-palette";
 import { openAndDownload } from "@/lib/utils";
+import NavButtons from "./nav-buttons";
 
 const techIcons = [
   { icon: SiReact, key: "react", name: "React" },
@@ -258,22 +259,7 @@ export default function Hero() {
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex gap-3">
-          <Link
-            href="/experience"
-            prefetch={true}
-            className="flex-1 py-3 px-4 text-center text-base font-medium bg-foreground text-background rounded-lg hover:bg-accent transition-colors"
-          >
-            see my experience ↗
-          </Link>
-          <Link
-            href="/projects"
-            prefetch={true}
-            className="flex-1 py-3 px-4 text-center text-base font-medium border border-border rounded-lg text-muted-foreground hover:border-accent hover:text-accent transition-colors"
-          >
-            view projects ↗
-          </Link>
-        </div>
+        <NavButtons />
 
         {/* Footer - Location & Time centered */}
         <div className="pt-4 border-t border-border/50">

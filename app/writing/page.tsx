@@ -22,7 +22,7 @@ const socialLinks = [
   { icon: HiDocumentText, href: "/Kishan%20Suhirthan%20-%20Resume.pdf", label: "Resume" },
 ];
 
-export default function PostsPage() {
+export default function WritingPage() {
   const { theme, toggleTheme } = useTheme();
   const [time, setTime] = useState("00:00:00");
   const [mounted, setMounted] = useState(false);

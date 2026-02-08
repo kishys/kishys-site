@@ -172,7 +172,7 @@ export const platformsData: PlatformDataProps[] = [
     platform: "substack",
     title: "Tech & Career Insights",
     description: "Deep dives into technology trends and career development in engineering.",
-    url: "#", // Replace with your Substack URL
+    url: "https://substack.com/@kishansuhi",
     logo: "/images/platforms/substack-logo.svg", // Add logo to public/images/platforms/
     color: "#FF6B35",
   },
@@ -181,7 +181,7 @@ export const platformsData: PlatformDataProps[] = [
     platform: "medium",
     title: "Engineering Stories",
     description: "Technical articles and project breakdowns from my engineering journey.",
-    url: "#", // Replace with your Medium URL
+    url: "https://medium.com/@kishansuhi",
     logo: "/images/platforms/medium-logo.svg", // Add logo to public/images/platforms/
     color: "#00AB6C",
   },
@@ -190,7 +190,7 @@ export const platformsData: PlatformDataProps[] = [
     platform: "linkedin",
     title: "Professional Updates",
     description: "Career milestones, industry insights, and professional networking content.",
-    url: "#", // Replace with your LinkedIn URL
+    url: "https://www.linkedin.com/in/kishansuhirthan/recent-activity/all/",
     logo: "/images/platforms/linkedin-logo.svg", // Add logo to public/images/platforms/
     color: "#0077B5",
   },

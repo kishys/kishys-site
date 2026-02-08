@@ -8,6 +8,7 @@ import {
   FiHome, 
   FiBriefcase, 
   FiFolder, 
+  FiPenTool,
   FiSun,
   FiMoon,
   FiMail,
@@ -73,6 +74,15 @@ export default function CommandPalette({ open, onOpenChange }: CommandPalettePro
           shortcut: "P",
           action: () => {
             router.push("/projects");
+            onOpenChange(false);
+          },
+        },
+        {
+          icon: <FiPenTool className="h-4 w-4" />,
+          label: "Go to Writing",
+          shortcut: "W",
+          action: () => {
+            router.push("/writing");
             onOpenChange(false);
           },
         },

@@ -49,6 +49,11 @@ export function GlobalShortcutsProvider({ children }: { children: React.ReactNod
             slashPressed.current = false;
             router.push("/projects");
             break;
+          case "W":
+            e.preventDefault();
+            slashPressed.current = false;
+            router.push("/writing");
+            break;
           case "G":
             e.preventDefault();
             slashPressed.current = false;
@@ -74,7 +79,14 @@ export function GlobalShortcutsProvider({ children }: { children: React.ReactNod
             slashPressed.current = false;
             toggleTheme();
             break;
+          default:
+            // Reset slash state for any other key
+            slashPressed.current = false;
+            break;
         }
+      } else if (slashPressed.current) {
+        // Reset slash state if any other key is pressed
+        slashPressed.current = false;
       }
     };
 

@@ -62,7 +62,7 @@ export default function FeaturedPost({ post }: FeaturedPostProps) {
         <div className="flex items-center justify-between mb-4">
           <div 
             className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium text-white shadow-sm"
-            style={{ backgroundColor: "#00AB6C" }}
+            style={{ backgroundColor: "#6B7280" }}
           >
             <span>Medium</span>
           </div>
