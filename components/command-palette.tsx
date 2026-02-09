@@ -46,7 +46,7 @@ export default function CommandPalette({ open, onOpenChange }: CommandPalettePro
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const slashPressed = React.useRef(false);
 
-  const commandGroups: CommandGroup[] = [
+  const commandGroups: CommandGroup[] = React.useMemo(() => [
     {
       title: "Navigation",
       items: [
@@ -143,7 +143,7 @@ export default function CommandPalette({ open, onOpenChange }: CommandPalettePro
         },
       ],
     },
-  ];
+  ], [router, toggleTheme, onOpenChange, theme]);
 
   // Filter items based on search query
   const filteredGroups = commandGroups
@@ -207,7 +207,7 @@ export default function CommandPalette({ open, onOpenChange }: CommandPalettePro
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [open, theme, allItems, selectedIndex]);
+  }, [open, theme, allItems, selectedIndex, commandGroups]);
 
   // Focus input when opened and reset state
   React.useEffect(() => {
