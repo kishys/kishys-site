@@ -85,16 +85,17 @@ export default function WritingPage() {
                 {/* Centered Home */}
                 <Link
                   href="/"
-                  className="flex items-center gap-2 rounded-xl border border-accent/20 bg-accent/5 px-3 py-1.5 text-muted-foreground transition-all hover:border-accent/40 hover:bg-accent/10 hover:text-accent"
+                  prefetch={true}
+                  className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-muted-foreground border border-border rounded-lg hover:border-accent hover:text-accent transition-colors"
                 >
-                  <HiHome className="h-4 w-4" />
-                  <span className="text-sm font-medium">Home</span>
+                  <HiHome className="w-4 h-4" />
+                  <span>Home</span>
                 </Link>
                 
                 <div className="flex items-center gap-3">
                   <button
                     onClick={toggleTheme}
-                    className="flex h-9 w-9 items-center justify-center rounded-xl border border-accent/20 bg-accent/5 text-muted-foreground transition-all hover:border-accent/40 hover:bg-accent/10 hover:text-accent"
+                    className="text-muted-foreground hover:text-accent transition-colors"
                     aria-label="Toggle theme"
                   >
                     {theme === "dark" ? <FiSun className="h-4 w-4" /> : <FiMoon className="h-4 w-4" />}

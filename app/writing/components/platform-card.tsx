@@ -51,10 +51,10 @@ export default function PlatformCard({ platform }: PlatformCardProps) {
             <div className="w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden flex-shrink-0 mr-3" style={{ backgroundColor: imageError ? borderColor : 'white' }}>
               {!imageError ? (
                 <Image
-                  src={`/images/platforms/${platform.platform}-logo.png`}
+                  src={platform.logo}
                   alt={`${platform.name} logo`}
-                  width={24}
-                  height={24}
+                  width={platform.platform === 'linkedin' ? 28 : platform.platform === 'medium' ? 20 : 24}
+                  height={platform.platform === 'linkedin' ? 28 : platform.platform === 'medium' ? 20 : 24}
                   className="object-contain"
                   onError={() => setImageError(true)}
                 />
