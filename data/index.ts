@@ -1,4 +1,5 @@
 export type PositionItem = string | { title: string; date?: string };
+export type AwardItem = { title: string; date: string };
 
 export type ProjectDataProps = {
   title: string;
@@ -13,6 +14,7 @@ export type ProjectDataProps = {
   repo?: string;
   vcard?: string;
   positions?: PositionItem[];
+  awards?: AwardItem[];
 };
 
 // Experiences data - displayed in the first carousel
@@ -91,6 +93,11 @@ export const experienceData: ProjectDataProps[] = [
       { title: "General Instructor", date: "Sep 2024 - Present" },
       { title: "Air Cadet", date: "Nov 2021 - Present" },
     ],
+    awards: [
+      { title: "4-Year Long Service Medal", date: "Jun 2025" },
+      { title: "Chartwell Heritage Glen Community Award", date: "Jun 2025" },
+      { title: "Spirit Award - Level 2", date: "Jun 2023" },
+    ],
     tags: [],
   },
   {
@@ -114,7 +121,7 @@ export const experienceData: ProjectDataProps[] = [
     title: "Lifeguard & Aquatics Instructor",
     description:
       "Ensures that community pools remain safe, supportive, and enjoyable for swimmers of all ages. Provides swim instruction to all ages, maintains oversight of aquatic safety, and supports community fitness and learning through structured aquatic programs.",
-    summary: "City of Mississauga | Recreation & Culture Division",
+    summary: "City of Mississauga - Recreation & Culture Division",
     date: "Sep 2025 - Present",
     href: "lifeguard",
     startDate: "2025-09-01",
@@ -122,7 +129,11 @@ export const experienceData: ProjectDataProps[] = [
     website: "https://www.mississauga.ca/",
     vcard: "#",
     positions: [
-      { title: "Aquatics Instructor", date: "Sep 2025 - Present" },
+      { title: "Lifeguard & Aquatics Instructor", date: "Sep 2025 - Present" },
+      { title: "Junior Instructor - Volunteer", date: "Sep 2023 - May 2025" },
+    ],
+    awards: [
+      { title: "Certificate of Appreciation - Contributions to Aquatics", date: "Apr 2024" },
     ],
     tags: [],
   },
@@ -162,6 +173,25 @@ export const postsData: PostDataProps[] = [
     url: "#",
     excerpt: "This is where I share my latest thoughts on technology, career development, and personal growth. Join me as I explore the intersection of engineering and innovation.",
     featured: true,
+  },
+];
+
+// Certifications data
+export type CertificationDataProps = {
+  title: string;
+  organization: string;
+  orgLogo: string; // path to org logo image
+  certificateImage: string; // path to certificate image
+  dateObtained: string; // e.g. "January 2025"
+};
+
+export const certificationsData: CertificationDataProps[] = [
+  {
+    title: "CS50 - Introduction to Computer Science",
+    organization: "Harvard University",
+    orgLogo: "/images/certifications/org-logo.png",
+    certificateImage: "/images/certifications/cert-1.png",
+    dateObtained: "December 2024",
   },
 ];
 

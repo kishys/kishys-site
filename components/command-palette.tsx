@@ -86,6 +86,7 @@ export default function CommandPalette({ open, onOpenChange }: CommandPalettePro
             onOpenChange(false);
           },
         },
+
       ],
     },
     {

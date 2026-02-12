@@ -207,6 +207,23 @@ export default function Page(props: {
                 </div>
               </div>
 
+              {/* Awards */}
+              {(experience as any).awards && (experience as any).awards.length > 0 && (
+                <div className="mt-4">
+                  <h4 className="text-sm font-medium">Awards</h4>
+                  <div className="mt-2 text-sm text-muted-foreground">
+                    <ul className="space-y-3">
+                      {(experience as any).awards.map((award: any, i: number) => (
+                        <li key={i} className="flex items-center justify-between">
+                          <span>{award.title}</span>
+                          <span className="text-xs text-muted-foreground whitespace-nowrap">{award.date}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )}
+
               {/* Footer - Location & Time centered */}
               <div className="pt-4 border-t border-border/50">
                 <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
