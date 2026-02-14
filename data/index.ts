@@ -32,6 +32,7 @@ export const experienceData: ProjectDataProps[] = [
     vcard: "https://team1325.kishansuhi.ca/",
     positions: [
       { title: "Mechanical Subteam", date: "Oct 2025 - Present" },
+      { title: "Business Subteam", date: "Jan 2026 - Present" },
     ],
     tags: [],
   },
@@ -47,7 +48,7 @@ export const experienceData: ProjectDataProps[] = [
     startDate: "2024-10-01",
     endDate: "Present",
     website: "https://innovire.ca", // placeholder, replace with real URL
-    vcard: "https://kishan-innovire-card.vercel.app", // placeholder vCard link
+    vcard: "https://innovire.kishansuhi.ca/", // placeholder vCard link
     positions: [
       { title: "Web Developer", date: "Sep 2025 - Present" },
       { title: "Logistics", date: "Oct 2024 - Present" },
@@ -65,7 +66,7 @@ export const experienceData: ProjectDataProps[] = [
     startDate: "2024-12-01",
     endDate: "Present",
     website: "https://www.drinterested.org", // placeholder
-    vcard: "https://kishan-drint-card.vercel.app",
+    vcard: "https://drinterested.kishansuhi.ca/",
     positions: [
       { title: "Deputy Executive Director", date: "Apr 2025 - Present" },
       { title: "Director of Technology", date: "Dec 2024 - Apr 2025" },
