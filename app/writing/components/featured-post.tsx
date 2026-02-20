@@ -76,7 +76,7 @@ export default function FeaturedPost({ post }: FeaturedPostProps) {
         <div className="flex-1 flex flex-col justify-center">
           {loading ? (
             <div className="text-muted-foreground text-sm text-center animate-pulse">
-              Loading "The Tech Breif"...
+              Loading &ldquo;The Tech Brief&rdquo;...
             </div>
           ) : error ? (
             <div className="text-muted-foreground text-sm text-center">
