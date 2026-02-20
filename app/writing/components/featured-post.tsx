@@ -46,7 +46,7 @@ export default function FeaturedPost({ post }: FeaturedPostProps) {
           setError('No posts found');
         }
       } catch (err) {
-        setError('Failed to fetch latest post');
+        setError('Its taking some time, just click the links below to check them out');
       } finally {
         setLoading(false);
       }
@@ -76,7 +76,7 @@ export default function FeaturedPost({ post }: FeaturedPostProps) {
         <div className="flex-1 flex flex-col justify-center">
           {loading ? (
             <div className="text-muted-foreground text-sm text-center animate-pulse">
-              Loading latest post...
+              Loading "The Tech Breif"...
             </div>
           ) : error ? (
             <div className="text-muted-foreground text-sm text-center">

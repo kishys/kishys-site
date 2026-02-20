@@ -20,7 +20,7 @@ export type ProjectDataProps = {
 // Experiences data - displayed in the first carousel
 export const experienceData: ProjectDataProps[] = [
   {
-    title: "FRC Team 1325 - Mechanical Member",
+    title: "FRC Team 1325 - Robotics Member",
     description:
       "Joining this team to deepen my understanding of robotics, collaborate on innovative projects, and gain real-world experience in engineering and creative problem-solving for the 2025–2026 season, with a focus on working in the mechanical subteam and contributing to the design, construction, and testing of key robot subsystems.",
     summary: "Mechanical Subteam at FIRST Robotics Competition Team 1325 Inverse Paradox",
@@ -33,11 +33,12 @@ export const experienceData: ProjectDataProps[] = [
     positions: [
       { title: "Mechanical Subteam", date: "Oct 2025 - Present" },
       { title: "Business Subteam", date: "Jan 2026 - Present" },
+      { title: "Media Subteam", date: "Feb 2026 - Present" },
     ],
     tags: [],
   },
   {
-    title: "Innovire Logistics Team + Web Developer",
+    title: "Innovire Logistics Team & Web Developer",
     description:
       "Over 50 youth were impacted through interactive STEM presentations and hands-on workshops designed to foster interest in science and aviation. Weekly collaboration meetings supported effective teamwork and clear communication. An aviation-based educational workshop was developed, and community events were organized in partnership with multiple organizations to enhance outreach and engagement.",
       
@@ -51,7 +52,7 @@ export const experienceData: ProjectDataProps[] = [
     vcard: "https://innovire.kishansuhi.ca/", // placeholder vCard link
     positions: [
       { title: "Web Developer", date: "Sep 2025 - Present" },
-      { title: "Logistics", date: "Oct 2024 - Present" },
+      { title: "Logistics Team", date: "Oct 2024 - Present" },
     ],
     tags: [],
   },
@@ -60,12 +61,12 @@ export const experienceData: ProjectDataProps[] = [
     description:
       "Leading three key departments including Technology, Finance, and Events, with a focus on organizational leadership, strategic communication, and cross functional collaboration. Committed to fostering innovation, empowering teams, aligning efforts with the organization’s mission, and planning and executing major events to drive engagement, growth, and overall impact for Dr. Interested.",
     summary:
-      "Deputy Executive Director | Vice President | Overseeing Technology, Finance, and Events",
+      "Deputy Executive Director / Vice President - Overseeing Technology, Finance, and Events",
     date: "Dec 2024 - Present",
-    href: "drint",
+    href: "drinterested",
     startDate: "2024-12-01",
     endDate: "Present",
-    website: "https://www.drinterested.org", // placeholder
+    website: "https://www.drinterested.org", 
     vcard: "https://drinterested.kishansuhi.ca/",
     positions: [
       { title: "Deputy Executive Director", date: "Apr 2025 - Present" },
@@ -80,7 +81,7 @@ export const experienceData: ProjectDataProps[] = [
     summary:
       "Flight Sergeant | Level 2 Non-Commissioned Officer | Operations and Supply Team",
     date: "Nov 2021 - Present",
-    href: "fsgtnco",
+    href: "800squadron",
     startDate: "2021-11-01",
     endDate: "Present",
     website: "https://www.800squadron.com/",
@@ -92,7 +93,6 @@ export const experienceData: ProjectDataProps[] = [
       { title: "Section Commander", date: "Nov 2024 - Present" },
       { title: "Operations and Supply", date: "Nov 2024 - Present" },
       { title: "General Instructor", date: "Sep 2024 - Present" },
-      { title: "Air Cadet", date: "Nov 2021 - Present" },
     ],
     awards: [
       { title: "4-Year Long Service Medal", date: "Jun 2025" },
@@ -102,12 +102,12 @@ export const experienceData: ProjectDataProps[] = [
     tags: [],
   },
   {
-    title: "Operations and Logistics | Building Growth",
+    title: "Operations and Logistics - Building Growth",
     description:
       "Operations & Logistics Lead for the EX3 Case Competition, overseeing event coordination, logistics planning, and execution to ensure seamless operations.",
-    summary: "Explore3 Case Competition | Medicine, Law, and Finance",
+    summary: "Explore3 Case Competition - Medicine, Law, and Finance",
     date: "May 2025 - Present",
-    href: "ex3",
+    href: "explore3",
     startDate: "2025-05-01",
     endDate: "Present",
     website: "https://explore3.live/",
@@ -124,11 +124,11 @@ export const experienceData: ProjectDataProps[] = [
       "Ensures that community pools remain safe, supportive, and enjoyable for swimmers of all ages. Provides swim instruction to all ages, maintains oversight of aquatic safety, and supports community fitness and learning through structured aquatic programs.",
     summary: "City of Mississauga - Recreation & Culture Division",
     date: "Sep 2025 - Present",
-    href: "lifeguard",
+    href: "aquatics",
     startDate: "2025-09-01",
     endDate: "Present",
     website: "https://www.mississauga.ca/",
-    vcard: "#",
+    vcard: "https://www.mississauga.ca/",
     positions: [
       { title: "Lifeguard & Aquatics Instructor", date: "Sep 2025 - Present" },
       { title: "Junior Instructor - Volunteer", date: "Sep 2023 - May 2025" },
@@ -140,10 +140,8 @@ export const experienceData: ProjectDataProps[] = [
   },
 ];
 
-// Projects data - displayed in the second carousel
 export const projectData: ProjectDataProps[] = [];
 
-// Posts data types
 export type PostDataProps = {
   title: string;
   description: string;

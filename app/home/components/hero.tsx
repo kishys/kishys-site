@@ -198,7 +198,7 @@ export default function Hero() {
                   <span className="text-sm">└</span>
                   <span>Deputy Executive Director:</span>
                 </div>
-                <Link href="/experience/drint" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors whitespace-nowrap max-[408px]:whitespace-normal">
+                <Link href="/experience/drinterested" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors whitespace-nowrap max-[408px]:whitespace-normal">
                   Dr. Interested
                 </Link>
               </div>
@@ -208,7 +208,7 @@ export default function Hero() {
                   <span className="text-sm">└</span>
                   <span>Operations, Logistics, and Growth:</span>
                 </div>
-                <Link href="/experience/ex3" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors whitespace-nowrap max-[408px]:whitespace-normal">
+                <Link href="/experience/explore3" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors whitespace-nowrap max-[408px]:whitespace-normal">
                   Explore3
                 </Link>
               </div>
@@ -218,7 +218,7 @@ export default function Hero() {
                   <span className="text-sm">└</span>
                   <span>Flight Sergeant:</span>
                 </div>
-                <Link href="/experience/fsgtnco" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors whitespace-nowrap max-[408px]:whitespace-normal">
+                <Link href="/experience/800squadron" className="font-medium text-foreground underline decoration-accent/50 hover:text-accent transition-colors whitespace-nowrap max-[408px]:whitespace-normal">
                   RCAirCS
                 </Link>
               </div>
