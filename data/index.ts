@@ -31,9 +31,9 @@ export const experienceData: ProjectDataProps[] = [
     website: "https://www.team1325.com/",
     vcard: "https://team1325.kishansuhi.ca/",
     positions: [
-      { title: "Mechanical Subteam", date: "Oct 2025 - Present" },
-      { title: "Business Subteam", date: "Jan 2026 - Present" },
-      { title: "Media Subteam", date: "Feb 2026 - Present" },
+      { title: "Mechanical Subteam", date: "Sep 2025 - Present" },
+      { title: "Business Subteam", date: "Sep 2025 - Present" },
+      { title: "Scouting Subteam - Competition", date: "Nov 2025 - Present" },
     ],
     tags: [],
   },
@@ -51,7 +51,7 @@ export const experienceData: ProjectDataProps[] = [
     website: "https://innovire.ca", // placeholder, replace with real URL
     vcard: "https://innovire.kishansuhi.ca/", // placeholder vCard link
     positions: [
-      { title: "Web Developer", date: "Sep 2025 - Present" },
+      { title: "Full Stack Web Developer", date: "Sep 2025 - Present" },
       { title: "Logistics Team", date: "Oct 2024 - Present" },
     ],
     tags: [],
@@ -69,7 +69,7 @@ export const experienceData: ProjectDataProps[] = [
     website: "https://www.drinterested.org", 
     vcard: "https://drinterested.kishansuhi.ca/",
     positions: [
-      { title: "Deputy Executive Director", date: "Apr 2025 - Present" },
+      { title: "Deputy Executive Director - Vice President", date: "Apr 2025 - Present" },
       { title: "Director of Technology", date: "Dec 2024 - Apr 2025" },
     ],
     tags: [],
