@@ -38,7 +38,7 @@ export const experienceData: ProjectDataProps[] = [
     awards: [
       { title: "Finalist - FIRST Provincial Championship - Science Division", date: "Apr 2026" },
       { title: "Finalist - Humber Polytechnic District Event", date: "Mar 2026" },
-      { title: "FIRST Impact Award - McMaster District Event", date: "Mar 2026" },
+      { title: "FIRST Impact Award Winner - McMaster District Event", date: "Mar 2026" },
 
     ],
     tags: [],
@@ -113,7 +113,7 @@ export const experienceData: ProjectDataProps[] = [
     tags: [],
   },
   {
-    title: "Operations and Logistics - Building Growth",
+    title: "Co-Founder - Operations and Logistics",
     description:
       "Operations & Logistics Lead for the EX3 Case Competition, overseeing event coordination, logistics planning, and execution to ensure seamless operations.",
     summary: "Explore3 Case Competition - Medicine, Law, and Finance",
