@@ -35,21 +35,27 @@ export const experienceData: ProjectDataProps[] = [
       { title: "Business Subteam", date: "Sep 2025 - Present" },
       { title: "Scouting Subteam - Competition", date: "Nov 2025 - Present" },
     ],
+    awards: [
+      { title: "Finalist - FIRST Provincial Championship - Science Division", date: "Apr 2026" },
+      { title: "Finalist - Humber Polytechnic District Event", date: "Mar 2026" },
+      { title: "FIRST Impact Award - McMaster District Event", date: "Mar 2026" },
+
+    ],
     tags: [],
   },
   {
     title: "Innovire Logistics Team & Web Developer",
     description:
       "Over 50 youth were impacted through interactive STEM presentations and hands-on workshops designed to foster interest in science and aviation. Weekly collaboration meetings supported effective teamwork and clear communication. An aviation-based educational workshop was developed, and community events were organized in partnership with multiple organizations to enhance outreach and engagement.",
-      
+
     summary:
       "STEM based Non-Profit Presentation, Workshops, and Website Development",
     date: "Oct 2024 - Present",
     href: "innovire",
     startDate: "2024-10-01",
     endDate: "Present",
-    website: "https://innovire.ca", // placeholder, replace with real URL
-    vcard: "https://innovire.kishansuhi.ca/", // placeholder vCard link
+    website: "https://innovire.ca",
+    vcard: "https://innovire.kishansuhi.ca/",
     positions: [
       { title: "Full Stack Web Developer", date: "Sep 2025 - Present" },
       { title: "Logistics Team", date: "Oct 2024 - Present" },
@@ -66,11 +72,15 @@ export const experienceData: ProjectDataProps[] = [
     href: "drinterested",
     startDate: "2024-12-01",
     endDate: "Present",
-    website: "https://www.drinterested.org", 
+    website: "https://www.drinterested.org",
     vcard: "https://drinterested.kishansuhi.ca/",
     positions: [
       { title: "Deputy Executive Director - Vice President", date: "Apr 2025 - Present" },
       { title: "Director of Technology", date: "Dec 2024 - Apr 2025" },
+    ],
+    awards: [
+      { title: "Civic Award - City of Mississauga", date: "Jun 2026" },
+      { title: "Ontario Volunteer Service Award", date: "May 2026" },
     ],
     tags: [],
   },
@@ -86,15 +96,16 @@ export const experienceData: ProjectDataProps[] = [
     endDate: "Present",
     website: "https://www.800squadron.com/",
     vcard: "http://800sqn.kishansuhi.ca/",
-    // Example with custom per-position dates: each item can be a string or an object
     positions: [
       { title: "Flight Sergeant", date: "Oct 2025 - Present" },
       { title: "Level 2 Non-Commissioned Officer", date: "Oct 2025 - Present" },
-      { title: "Section Commander", date: "Nov 2024 - Present" },
+      { title: "Flight Senior - Section Commander", date: "Nov 2024 - Present" },
       { title: "Operations and Supply", date: "Nov 2024 - Present" },
       { title: "General Instructor", date: "Sep 2024 - Present" },
     ],
     awards: [
+      { title: "Top Flight Award", date: "Jun 2026" },
+      { title: "5-Year Long Service Medal - Bar", date: "Jun 2026" },
       { title: "4-Year Long Service Medal", date: "Jun 2025" },
       { title: "Chartwell Heritage Glen Community Award", date: "Jun 2025" },
       { title: "Spirit Award - Level 2", date: "Jun 2023" },
